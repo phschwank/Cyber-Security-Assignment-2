@@ -35,9 +35,9 @@ body {
     background-color: #efecea;
 }
 
-ol, ul {
+/*ol, ul {
     list-style: none;
-}
+}*/
 
 blockquote, q {
     quotes: none;
@@ -79,8 +79,9 @@ h2 {
 
 h3 {
     color: #5d5c61;
-    font-size: 100%;
-    margin-bottom: 10px;
+    font-size: 125%;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .row {
@@ -209,10 +210,29 @@ tbody {
 }
 
 .embedded-video {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    padding-bottom: 10px;
     width: 420px;
     height: 315px;
+}
+
+.specification-list-level-one {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.specification-list-level-two {
+    list-style-type: circle;
+    padding-left: 35px;
+}
+
+.recommendation {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background-color: lightblue;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: none;
 }
 
 /* Style the buttons that are used to open and close the accordion panel */

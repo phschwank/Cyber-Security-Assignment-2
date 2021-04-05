@@ -40,149 +40,172 @@
                 sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</h3>
         </div>
         <div class="content">
-            <!--
-            ##########################
-                    Section 1
-            ##########################
-            -->
-            <h2>Section 1</h2>
-            <p class="text-padding">This is the introduction text to a prototype question. This is another sentence, which
-                is followed by some more words. Is this prototype scenario properly implemented in your company?</p>
-            <div class="input-row">
-                <label for="evaluation1">Choose:</label>
-                <select id="evaluation1" class="form-control">
-                    <option value="2">Implemented</option>
-                    <option value="1">Partly Implemented</option>
-                    <option value="0">Not Implemented</option>
-                    <option value="na">Not Applicable</option>
-                </select>
+            <div class="row">
+                <h1>1.</h1>
+                <p class="text-padding">Make sure your employees know how their <b>personal data</b> is used and what their
+                    rights are under GDPR.</p>
+            </div>
+            <div class="column">
+                <div class="input-row">
+                    <label for="evaluation1">Choose:</label>
+                    <select id="evaluation1" class="form-control" onchange="showRecommendation('1')">
+                        <option value="3">Successfully implemented</option>
+                        <option value="2">Partly implemented</option>
+                        <option value="1">Planned to implement</option>
+                        <option value="0">Not yet implemented or planned</option>
+                        <option value="na">Not applicable</option>
+                    </select>
+                </div>
+                <div id="recommendation1" class="recommendation">
+                    Make sure your employees are aware how their personal data is applied and what their rights are based on GDPR.
+                </div>
             </div>
             <button class="accordion">More Information</button>
             <div class="panel">
-                <p class="text-padding">Index Page Example Text. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                    sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-                    vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                    est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-                    sit amet.</p>
-                <iframe class="embedded-video" src="https://www.youtube.com/embed/n5WJOncaHt4"></iframe>
+                <h3>Specification &mdash; What is 'Personal Data'?</h3>
+                <p class="text-padding">
+                    Personal data is information that relates to an identified or identifiable individual.
+                    Personal data only includes information relating to natural persons who:
+                <ul class="specification-list-level-one">
+                <li>
+                    can be identified or who are identifiable, directly from the information in question; or
+                </li>
+                <li>
+                    who can be indirectly identified from that information in combination with other information.
+                </li>
+                <li>
+                    list of identifiers, including:
+                    <ul class="specification-list-level-two">
+                        <li>
+                            name;
+                        </li>
+                        <li>
+                            identification number;
+                        </li>
+                        <li>
+                            location data; and
+                        </li>
+                        <li>
+                            an online identifier.
+                        </li>
+                    </ul>
+                </li>
+                </ul>
+                </p>
+                <h3>Content</h3>
+                <iframe class="embedded-video" src="https://www.youtube.com/embed/qJX3fbq3fOg"></iframe>
             </div>
             <hr class="horizontal-separator">
-            <p class="text-padding">This is the introduction text to a prototype question. This is another sentence, which
-                is followed by some more words. Is this prototype scenario properly implemented in your company?</p>
-            <div class="input-row">
-                <label for="evaluation2">Choose:</label>
-                <select id="evaluation2" class="form-control">
-                    <option value="2">Implemented</option>
-                    <option value="1">Partly Implemented</option>
-                    <option value="0">Not Implemented</option>
-                    <option value="na">Not Applicable</option>
-                </select>
+            <div class="row">
+                <h1>2.</h1>
+                <p class="text-padding">Make sure your employees know how their <b>personal data</b> is used and what their
+                    rights are under GDPR.</p>
+            </div>
+            <div class="column">
+                <div class="input-row">
+                    <label for="evaluation2">Choose:</label>
+                    <select id="evaluation2" class="form-control" onchange="showRecommendation('2')">
+                        <option value="3">Successfully implemented</option>
+                        <option value="2">Partly implemented</option>
+                        <option value="1">Planned to implement</option>
+                        <option value="0">Not yet implemented or planned</option>
+                        <option value="na">Not applicable</option>
+                    </select>
+                </div>
+                <div id="recommendation2" class="recommendation">
+                    Make sure your employees are aware how their personal data is applied and what their rights are based on GDPR.
+                </div>
             </div>
             <button class="accordion">More Information</button>
             <div class="panel">
-                <p class="text-padding">Index Page Example Text. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                    sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-                    vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                    est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-                    sit amet.</p>
+                <h3>Specification &mdash; What is 'Personal Data'?</h3>
+                <p class="text-padding">
+                    Personal data is information that relates to an identified or identifiable individual.
+                    Personal data only includes information relating to natural persons who:
+                <ul class="specification-list-level-one">
+                    <li>
+                        can be identified or who are identifiable, directly from the information in question; or
+                    </li>
+                    <li>
+                        who can be indirectly identified from that information in combination with other information.
+                    </li>
+                    <li>
+                        list of identifiers, including:
+                        <ul class="specification-list-level-two">
+                            <li>
+                                name;
+                            </li>
+                            <li>
+                                identification number;
+                            </li>
+                            <li>
+                                location data; and
+                            </li>
+                            <li>
+                                an online identifier.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                </p>
+                <h3>Content</h3>
+                <iframe class="embedded-video" src="https://www.youtube.com/embed/qJX3fbq3fOg"></iframe>
             </div>
             <hr class="horizontal-separator">
-            <p class="text-padding">This is the introduction text to a prototype question. This is another sentence, which
-                is followed by some more words. Is this prototype scenario properly implemented in your company?</p>
-            <div class="input-row">
-                <label for="evaluation3">Choose:</label>
-                <select id="evaluation3" class="form-control">
-                    <option value="2">Implemented</option>
-                    <option value="1">Partly Implemented</option>
-                    <option value="0">Not Implemented</option>
-                    <option value="na">Not Applicable</option>
-                </select>
+            <div class="row">
+                <h1>3.</h1>
+                <p class="text-padding">Make sure your employees know how their <b>personal data</b> is used and what their
+                    rights are under GDPR.</p>
+            </div>
+            <div class="column">
+                <div class="input-row">
+                    <label for="evaluation3">Choose:</label>
+                    <select id="evaluation3" class="form-control" onchange="showRecommendation('3')">
+                        <option value="3">Successfully implemented</option>
+                        <option value="2">Partly implemented</option>
+                        <option value="1">Planned to implement</option>
+                        <option value="0">Not yet implemented or planned</option>
+                        <option value="na">Not applicable</option>
+                    </select>
+                </div>
+                <div id="recommendation3" class="recommendation">
+                    Make sure your employees are aware how their personal data is applied and what their rights are based on GDPR.
+                </div>
             </div>
             <button class="accordion">More Information</button>
             <div class="panel">
-                <p class="text-padding">Index Page Example Text. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                    sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-                    vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                    est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-                    sit amet.</p>
-            </div>
-            <hr class="horizontal-separator">
-            <!--
-            ##########################
-                    Section 2
-            ##########################
-            -->
-            <h2>Section 2</h2>
-            <p class="text-padding">This is the introduction text to a prototype question. This is another sentence, which
-                is followed by some more words. Is this prototype scenario properly implemented in your company?</p>
-            <div class="input-row">
-                <label for="evaluation4">Choose:</label>
-                <select id="evaluation4" class="form-control">
-                    <option value="2">Implemented</option>
-                    <option value="1">Partly Implemented</option>
-                    <option value="0">Not Implemented</option>
-                    <option value="na">Not Applicable</option>
-                </select>
-            </div>
-            <button class="accordion">More Information</button>
-            <div class="panel">
-                <p class="text-padding">Index Page Example Text. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                    sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-                    vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                    est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-                    sit amet.</p>
-            </div>
-            <hr class="horizontal-separator">
-            <p class="text-padding">This is the introduction text to a prototype question. This is another sentence, which
-                is followed by some more words. Is this prototype scenario properly implemented in your company?</p>
-            <div class="input-row">
-                <label for="evaluation5">Choose:</label>
-                <select id="evaluation5" class="form-control">
-                    <option value="2">Implemented</option>
-                    <option value="1">Partly Implemented</option>
-                    <option value="0">Not Implemented</option>
-                    <option value="na">Not Applicable</option>
-                </select>
-            </div>
-            <button class="accordion">More Information</button>
-            <div class="panel">
-                <p class="text-padding">Index Page Example Text. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                    sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-                    vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                    est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-                    sit amet.</p>
-            </div>
-            <hr class="horizontal-separator">
-            <p class="text-padding">This is the introduction text to a prototype question. This is another sentence, which
-                is followed by some more words. Is this prototype scenario properly implemented in your company?</p>
-            <div class="input-row">
-                <label for="evaluation6">Choose:</label>
-                <select id="evaluation6" class="form-control">
-                    <option value="2">Implemented</option>
-                    <option value="1">Partly Implemented</option>
-                    <option value="0">Not Implemented</option>
-                    <option value="na">Not Applicable</option>
-                </select>
-            </div>
-            <button class="accordion">More Information</button>
-            <div class="panel">
-                <p class="text-padding">Index Page Example Text. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                    sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-                    vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                    est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-                    sit amet.</p>
+                <h3>Specification &mdash; What is 'Personal Data'?</h3>
+                <p class="text-padding">
+                    Personal data is information that relates to an identified or identifiable individual.
+                    Personal data only includes information relating to natural persons who:
+                <ul class="specification-list-level-one">
+                    <li>
+                        can be identified or who are identifiable, directly from the information in question; or
+                    </li>
+                    <li>
+                        who can be indirectly identified from that information in combination with other information.
+                    </li>
+                    <li>
+                        list of identifiers, including:
+                        <ul class="specification-list-level-two">
+                            <li>
+                                name;
+                            </li>
+                            <li>
+                                identification number;
+                            </li>
+                            <li>
+                                location data; and
+                            </li>
+                            <li>
+                                an online identifier.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                </p>
+                <h3>Content</h3>
+                <iframe class="embedded-video" src="https://www.youtube.com/embed/qJX3fbq3fOg"></iframe>
             </div>
             <hr class="horizontal-separator">
             <div class="input-row">
