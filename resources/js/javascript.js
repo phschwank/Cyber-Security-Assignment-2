@@ -35,6 +35,7 @@ function countPoints() {
     scoreBoxProperty.style.display = "block";
 
     if (score >= 90) {
+        scoreBoxProperty.style.backgroundColor = "lightgoldenrodyellow";
         bronzeMedalProperty.style.display = "none";
         bronzeTextProperty.style.display = "none";
         silverMedalProperty.style.display = "none";
@@ -45,6 +46,7 @@ function countPoints() {
         goldTextProperty.style.display = "block";
     }
     else if ((score < 90) && (score >= 70)) {
+        scoreBoxProperty.style.backgroundColor = "lightblue";
         goldMedalProperty.style.display = "none";
         goldTextProperty.style.display = "none";
         bronzeMedalProperty.style.display = "none";
@@ -55,6 +57,7 @@ function countPoints() {
         silverTextProperty.style.display = "block";
     }
     else if ((score < 70) && (score >= 50)) {
+        scoreBoxProperty.style.backgroundColor = "lightsalmon";
         goldMedalProperty.style.display = "none";
         goldTextProperty.style.display = "none";
         silverMedalProperty.style.display = "none";
@@ -65,6 +68,7 @@ function countPoints() {
         bronzeTextProperty.style.display = "block";
     }
     else {
+        scoreBoxProperty.style.backgroundColor = "lightcoral";
         goldMedalProperty.style.display = "none";
         goldTextProperty.style.display = "none";
         silverMedalProperty.style.display = "none";

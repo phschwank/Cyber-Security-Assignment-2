@@ -229,7 +229,8 @@ tbody {
     width: 100%;
     padding: 10px 0;
     text-align: center;
-    background-color: lightblue;
+    background-color: lightcoral;
+    color: #444444;
     margin-top: 10px;
     margin-bottom: 10px;
     display: none;
@@ -238,7 +239,7 @@ tbody {
 .score-box {
     width: 100%;
     padding: 10px 0;
-    background-color: lightblue;
+    color: #444444;
     margin-top: 10px;
     margin-bottom: 10px;
     display: none;
