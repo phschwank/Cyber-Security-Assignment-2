@@ -235,6 +235,79 @@ tbody {
     display: none;
 }
 
+.score-box {
+    width: 100%;
+    padding: 10px 0;
+    background-color: lightblue;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.gold-text {
+    width: 100%;
+    margin: 50px 10px;
+    text-align: left;
+    display: none;
+}
+
+.silver-text {
+    width: 100%;
+    margin: 50px 10px;
+    text-align: left;
+    display: none;
+}
+
+.bronze-text {
+    width: 100%;
+    margin: 50px 10px;
+    text-align: left;
+    display: none;
+}
+
+.warning-text {
+    width: 100%;
+    margin: 50px 10px;
+    text-align: left;
+    display: none;
+}
+
+.gold-medal {
+    display: none;
+    width: 86px;
+    height: 121px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.silver-medal {
+    display: none;
+    width: 86px;
+    height: 121px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.bronze-medal {
+    display: none;
+    width: 86px;
+    height: 121px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.warning {
+    display: none;
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
     background-color: #d7d4d3;
@@ -271,6 +344,26 @@ tbody {
 
 .active:after {
     content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+#myTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #333; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#myTopBtn:hover {
+    background-color: #777; /* Add a dark-grey background on hover */
 }
 
 .horizontal-separator {
@@ -408,16 +501,3 @@ tbody {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
-/*
-!* The sticky class is added to the navbar with JS when it reaches its scroll position *!
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-!* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) *!
-.sticky + .content {
-    padding-top: 60px;
-}*/

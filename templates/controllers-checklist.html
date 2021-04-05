@@ -208,13 +208,77 @@
                 <iframe class="embedded-video" src="https://www.youtube.com/embed/qJX3fbq3fOg"></iframe>
             </div>
             <hr class="horizontal-separator">
+            <div id="score-box" class="score-box">
+                <div class="row">
+                    <img src="../resources/images/goldmedal.png" alt="Result" id="gold-medal" class="gold-medal">
+                    <img src="../resources/images/silvermedal.png" alt="Result" id="silver-medal" class="silver-medal">
+                    <img src="../resources/images/bronzemedal.png" alt="Result" id="bronze-medal" class="bronze-medal">
+                    <img src="../resources/images/warning.png" alt="Result" id="warning" class="warning">
+                    <p id="gold-text" class="gold-text">This is an example text for a resulting value greater than 90.
+                        The example test is rewarded with a gold medal. Maybe some more blabla for the user.</p>
+                    <p id="silver-text" class="silver-text">This is an example text for a resulting value between 70 and
+                        90. The example test is rewarded with a silver medal. Maybe some more blabla for the user.</p>
+                    <p id="bronze-text" class="bronze-text">This is an example text for a resulting value between 50 and
+                        70. The example test is rewarded with a bronze medal. Maybe some more blabla for the user.</p>
+                    <p id="warning-text" class="warning-text">This is an example text for a resulting value of less than
+                        50. The user is made aware of this with a warning. Maybe some more blabla for the user.</p>
+                </div>
+            </div>
             <div class="input-row">
                 <button class="interaction-button" id="submit-button" onclick="countPoints()">Submit</button>
-                <input type="text" id="evaluation-sum" class="form-control" placeholder="0">
+                <!--<input type="text" id="evaluation-sum" class="form-control" placeholder="0">
                 <label for="max-score">Max Score: </label>
-                <input type="text" id="max-score" class="form-control" placeholder="0">
+                <input type="text" id="max-score" class="form-control" placeholder="0">-->
             </div>
-                <a class="interaction-button" href="templates/pageOne.html">Next</a>
+            <button onclick="topFunction()" id="myTopBtn" title="Go to top">Top</button>
+<!--            <a class="interaction-button" href="templates/pageOne.html">Next</a>-->
         </div>
     </body>
 </html>
+
+<!----------------------------------------------------------------------->
+<!--Template for a new Question-->
+<!----------------------------------------------------------------------->
+
+<!--<div class="row">
+    <h1>X.</h1>
+    <p class="text-padding">Question text.</p>
+</div>
+<div class="column">
+    <div class="input-row">
+        <label for="evaluationX">Choose:</label>
+        <select id="evaluationX" class="form-control" onchange="showRecommendation('X')">
+            <option value="3">Successfully implemented</option>
+            <option value="2">Partly implemented</option>
+            <option value="1">Planned to implement</option>
+            <option value="0">Not yet implemented or planned</option>
+            <option value="na">Not applicable</option>
+        </select>
+    </div>
+    <div id="recommendation3" class="recommendation">
+        Recommendation Text.
+    </div>
+</div>
+<button class="accordion">More Information</button>
+<div class="panel">
+    <h3>Specification &mdash; Subtitle/specific Content</h3>
+    <p class="text-padding">
+        Info Text:
+    <ul class="specification-list-level-one">
+        <li></li>
+        <li></li>
+        <li>
+            blabla:
+            <ul class="specification-list-level-two">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </li>
+    </ul>
+    </p>
+    <h3>Content</h3>
+    <iframe class="embedded-video" src="https://www.youtube.com/embed/CODE"></iframe>
+</div>
+<hr class="horizontal-separator">-->
