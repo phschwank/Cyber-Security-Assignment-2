@@ -1,4 +1,4 @@
-const QUESTIONS = 3;
+const QUESTIONS = 6;
 
 var evaluatedSum;
 var maxPoints;
@@ -78,7 +78,6 @@ function countPoints() {
         warningProperty.style.display = "block";
         warningTextProperty.style.display = "block";
     }
-
 }
 
 function showRecommendation(elementIndex) {

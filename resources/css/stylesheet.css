@@ -382,6 +382,7 @@ tbody {
     .logo {
         width: 100%;
         height: auto;
+        float: right;
     }
 
     .content {
