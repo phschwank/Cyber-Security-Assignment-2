@@ -1,4 +1,4 @@
-const QUESTIONS = 6;
+const QUESTIONS = 5;
 
 var evaluatedSum;
 var maxPoints;

@@ -68,12 +68,14 @@ body {
 h1 {
     color: #252426;
     font-size: 250%;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
 h2 {
     color: #414043;
     font-size: 175%;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
