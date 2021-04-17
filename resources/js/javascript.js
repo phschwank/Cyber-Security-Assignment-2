@@ -1,15 +1,15 @@
-const QUESTIONS = 5;
-
 var evaluatedSum;
 var maxPoints;
 var score;
+var numberOfQuestions;
 
 function countPoints() {
 
     evaluatedSum = 0;
     maxPoints = 0;
+    numberOfQuestions = document.getElementsByName("question").length;
 
-    for (var i = 0; i < QUESTIONS; i++) {
+    for (var i = 0; i < numberOfQuestions; i++) {
         var selObj = document.getElementById("evaluation" + (i+1));
         var selValue = parseInt(selObj.options[selObj.selectedIndex].value, 10);
         if (!(selObj.options[selObj.selectedIndex].text.localeCompare("Not applicable") === 0)) {
@@ -17,9 +17,6 @@ function countPoints() {
             evaluatedSum = evaluatedSum + selValue;
         }
     }
-
-    //document.getElementById("evaluation-sum").value = evaluatedSum;
-    //document.getElementById("max-score").value = maxPoints;
 
     score = (evaluatedSum / maxPoints) * 100;
     var scoreBoxProperty = document.getElementById("score-box");
