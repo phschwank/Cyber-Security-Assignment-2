@@ -19,62 +19,41 @@ function countPoints() {
     }
 
     score = (evaluatedSum / maxPoints) * 100;
-    var scoreBoxProperty = document.getElementById("score-box");
-    var goldMedalProperty = document.getElementById("gold-medal");
-    var goldTextProperty = document.getElementById("gold-text");
-    var silverMedalProperty = document.getElementById("silver-medal");
-    var silverTextProperty = document.getElementById("silver-text");
-    var bronzeMedalProperty = document.getElementById("bronze-medal");
-    var bronzeTextProperty = document.getElementById("bronze-text");
-    var warningProperty = document.getElementById("warning");
-    var warningTextProperty = document.getElementById("warning-text");
-
-    scoreBoxProperty.style.display = "block";
 
     if (score >= 90) {
-        scoreBoxProperty.style.backgroundColor = "lightgoldenrodyellow";
-        bronzeMedalProperty.style.display = "none";
-        bronzeTextProperty.style.display = "none";
-        silverMedalProperty.style.display = "none";
-        silverTextProperty.style.display = "none";
-        warningProperty.style.display = "none";
-        warningTextProperty.style.display = "none";
-        goldMedalProperty.style.display = "block";
-        goldTextProperty.style.display = "block";
+        hideShowResultContent("block", "block", "none", "none", "none",
+            "none", "none", "none", "lightgoldenrodyellow")
     }
     else if ((score < 90) && (score >= 70)) {
-        scoreBoxProperty.style.backgroundColor = "lightblue";
-        goldMedalProperty.style.display = "none";
-        goldTextProperty.style.display = "none";
-        bronzeMedalProperty.style.display = "none";
-        bronzeTextProperty.style.display = "none";
-        warningProperty.style.display = "none";
-        warningTextProperty.style.display = "none";
-        silverMedalProperty.style.display = "block";
-        silverTextProperty.style.display = "block";
+        hideShowResultContent("none", "none", "block", "block", "none",
+            "none", "none", "none", "lightblue")
     }
     else if ((score < 70) && (score >= 50)) {
-        scoreBoxProperty.style.backgroundColor = "lightsalmon";
-        goldMedalProperty.style.display = "none";
-        goldTextProperty.style.display = "none";
-        silverMedalProperty.style.display = "none";
-        silverTextProperty.style.display = "none";
-        warningProperty.style.display = "none";
-        warningTextProperty.style.display = "none";
-        bronzeMedalProperty.style.display = "block";
-        bronzeTextProperty.style.display = "block";
+        hideShowResultContent("none", "none", "none", "none", "block",
+            "block", "none", "none", "lightsalmon")
     }
     else {
-        scoreBoxProperty.style.backgroundColor = "lightcoral";
-        goldMedalProperty.style.display = "none";
-        goldTextProperty.style.display = "none";
-        silverMedalProperty.style.display = "none";
-        silverTextProperty.style.display = "none";
-        bronzeMedalProperty.style.display = "none";
-        bronzeTextProperty.style.display = "none";
-        warningProperty.style.display = "block";
-        warningTextProperty.style.display = "block";
+        hideShowResultContent("none", "none", "none", "none", "none",
+            "none", "block", "block", "lightcoral")
     }
+}
+
+function hideShowResultContent(goldMedal, goldText, silverMedal, silverText, bronzeMedal, bronzeText, warningSign, warningText, backgroundColor) {
+
+    document.getElementById("gold-medal").style.display = goldMedal;
+    document.getElementById("gold-text").style.display = goldText;
+
+    document.getElementById("silver-medal").style.display = silverMedal;
+    document.getElementById("silver-text").style.display = silverText;
+
+    document.getElementById("bronze-medal").style.display = bronzeMedal;
+    document.getElementById("bronze-text").style.display = bronzeText;
+
+    document.getElementById("warning").style.display = warningSign;
+    document.getElementById("warning-text").style.display = warningText;
+
+    document.getElementById("score-box").style.backgroundColor = backgroundColor;
+    document.getElementById("score-box").style.display = "block";
 }
 
 function showRecommendation(elementIndex) {
