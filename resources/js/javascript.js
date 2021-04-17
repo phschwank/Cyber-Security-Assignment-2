@@ -21,37 +21,33 @@ function countPoints() {
     score = (evaluatedSum / maxPoints) * 100;
 
     if (score >= 90) {
-        hideShowResultContent("block", "block", "none", "none", "none",
+        showScoreBox("block", "block", "none", "none", "none",
             "none", "none", "none", "lightgoldenrodyellow")
     }
     else if ((score < 90) && (score >= 70)) {
-        hideShowResultContent("none", "none", "block", "block", "none",
+        showScoreBox("none", "none", "block", "block", "none",
             "none", "none", "none", "lightblue")
     }
     else if ((score < 70) && (score >= 50)) {
-        hideShowResultContent("none", "none", "none", "none", "block",
+        showScoreBox("none", "none", "none", "none", "block",
             "block", "none", "none", "lightsalmon")
     }
     else {
-        hideShowResultContent("none", "none", "none", "none", "none",
+        showScoreBox("none", "none", "none", "none", "none",
             "none", "block", "block", "lightcoral")
     }
 }
 
-function hideShowResultContent(goldMedal, goldText, silverMedal, silverText, bronzeMedal, bronzeText, warningSign, warningText, backgroundColor) {
-
+function showScoreBox(goldMedal, goldText, silverMedal, silverText, bronzeMedal, bronzeText, warningSign,
+                               warningText, backgroundColor) {
     document.getElementById("gold-medal").style.display = goldMedal;
     document.getElementById("gold-text").style.display = goldText;
-
     document.getElementById("silver-medal").style.display = silverMedal;
     document.getElementById("silver-text").style.display = silverText;
-
     document.getElementById("bronze-medal").style.display = bronzeMedal;
     document.getElementById("bronze-text").style.display = bronzeText;
-
     document.getElementById("warning").style.display = warningSign;
     document.getElementById("warning-text").style.display = warningText;
-
     document.getElementById("score-box").style.backgroundColor = backgroundColor;
     document.getElementById("score-box").style.display = "block";
 }
