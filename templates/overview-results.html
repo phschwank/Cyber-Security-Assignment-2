@@ -1,37 +1,162 @@
 <!DOCTYPE html>
 <html lang="eng" xml:lang="eng">
-    <link rel="stylesheet" href="../resources/css/stylesheet.css">
-    <head>
-        <title>Overview / Results</title>
-        <script language="javascript" type="text/javascript" src="resources/js/javascript.js" defer></script>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div class="header">
-
-            <div id="navbar" class="navbar">
-                <a href="../index.html">Home</a>
-                <a href="#">Overview / Results</a>
-                <div class="dropdown">
-                    <button class="dropbtn">Assessments
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="controllers-checklist.html">Controllers Checklist</a>
-                        <a href="processors-checklist.html">Processors Checklist</a>
-                        <a href="information-security.html">Information Security</a>
-                        <a href="data-sharing.html">Data Sharing and Subject Access</a>
-                        <a href="record-management.html">Record Management</a>
-                    </div>
-                </div>
+<link href="../resources/css/stylesheet.css" rel="stylesheet">
+<head>
+    <title>Overview / Results</title>
+    <script defer language="javascript" src="../resources/js/javascript.js" type="text/javascript"></script>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+</head>
+<body>
+<div class="header">
+    <div class="navbar" id="navbar">
+        <a href="../index.html">Home</a>
+        <a href="#">Overview / Results</a>
+        <div class="dropdown">
+            <button class="dropbtn">Assessments
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="controllers-checklist.html">Controllers Checklist</a>
+                <a href="processors-checklist.html">Processors Checklist</a>
+                <a href="information-security.html">Information Security</a>
+                <a href="data-sharing.html">Data Sharing and Subject Access</a>
+                <a href="record-management.html">Record Management</a>
+                <a href="consent-checklist.html">Consent Checklist</a>
             </div>
-            <h1>Overview / Results</h1>
-            <h3>Index Page Intro Text. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</h3>
         </div>
-        <div class="content">
-            <!--NEW CONTENT HERE-->
+    </div>
+    <h1>Overview / Results</h1>
+    <h3>Index Page Intro Text. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+        sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</h3>
+</div>
+<div class="content">
+    <h2>Controllers Checklist</h2>
+    <div class="recommendation" id="no-controllers-checklist">
+        This checklist has not yet been completed.
+    </div>
+    <div class="score-box" id="score-box-controllers-checklist">
+        <div class="row">
+            <img alt="Result" class="gold-medal" id="gold-medal-controllers-checklist" src="../resources/images/goldmedal.png">
+            <img alt="Result" class="silver-medal" id="silver-medal-controllers-checklist" src="../resources/images/silvermedal.png">
+            <img alt="Result" class="bronze-medal" id="bronze-medal-controllers-checklist" src="../resources/images/bronzemedal.png">
+            <img alt="Result" class="warning-sign" id="warning-sign-controllers-checklist" src="../resources/images/warning.png">
+            <p class="gold-text" id="gold-text-controllers-checklist">This is an example text for a resulting value greater than 90.
+                The example test is rewarded with a gold medal. Maybe some more blabla for the user.</p>
+            <p class="silver-text" id="silver-text-controllers-checklist">This is an example text for a resulting value between 70 and
+                90. The example test is rewarded with a silver medal. Maybe some more blabla for the user.</p>
+            <p class="bronze-text" id="bronze-text-controllers-checklist">This is an example text for a resulting value between 50 and
+                70. The example test is rewarded with a bronze medal. Maybe some more blabla for the user.</p>
+            <p class="warning-text" id="warning-text-controllers-checklist">This is an example text for a resulting value of less than
+                50. The user is made aware of this with a warning. Maybe some more blabla for the user.</p>
         </div>
-    </body>
+    </div>
+    <hr class="horizontal-separator">
+    <h2>Processors Checklist</h2>
+    <div class="recommendation" id="no-processors-checklist">
+        This checklist has not yet been completed.
+    </div>
+    <div class="score-box" id="score-box-processors-checklist">
+        <div class="row">
+            <img alt="Result" class="gold-medal" id="gold-medal-processors-checklist" src="../resources/images/goldmedal.png">
+            <img alt="Result" class="silver-medal" id="silver-medal-processors-checklist" src="../resources/images/silvermedal.png">
+            <img alt="Result" class="bronze-medal" id="bronze-medal-processors-checklist" src="../resources/images/bronzemedal.png">
+            <img alt="Result" class="warning-sign" id="warning-sign-processors-checklist" src="../resources/images/warning.png">
+            <p class="gold-text" id="gold-text-processors-checklist">This is an example text for a resulting value greater than 90.
+                The example test is rewarded with a gold medal. Maybe some more blabla for the user.</p>
+            <p class="silver-text" id="silver-text-processors-checklist">This is an example text for a resulting value between 70 and
+                90. The example test is rewarded with a silver medal. Maybe some more blabla for the user.</p>
+            <p class="bronze-text" id="bronze-text-processors-checklist">This is an example text for a resulting value between 50 and
+                70. The example test is rewarded with a bronze medal. Maybe some more blabla for the user.</p>
+            <p class="warning-text" id="warning-text-processors-checklist">This is an example text for a resulting value of less than
+                50. The user is made aware of this with a warning. Maybe some more blabla for the user.</p>
+        </div>
+    </div>
+    <hr class="horizontal-separator">
+    <h2>Information Security</h2>
+    <div class="recommendation" id="no-information-checklist">
+        This checklist has not yet been completed.
+    </div>
+    <div class="score-box" id="score-box-information-checklist">
+        <div class="row">
+            <img alt="Result" class="gold-medal" id="gold-medal-information-checklist" src="../resources/images/goldmedal.png">
+            <img alt="Result" class="silver-medal" id="silver-medal-information-checklist" src="../resources/images/silvermedal.png">
+            <img alt="Result" class="bronze-medal" id="bronze-medal-information-checklist" src="../resources/images/bronzemedal.png">
+            <img alt="Result" class="warning-sign" id="warning-sign-information-checklist" src="../resources/images/warning.png">
+            <p class="gold-text" id="gold-text-information-checklist">This is an example text for a resulting value greater than 90.
+                The example test is rewarded with a gold medal. Maybe some more blabla for the user.</p>
+            <p class="silver-text" id="silver-text-information-checklist">This is an example text for a resulting value between 70 and
+                90. The example test is rewarded with a silver medal. Maybe some more blabla for the user.</p>
+            <p class="bronze-text" id="bronze-text-information-checklist">This is an example text for a resulting value between 50 and
+                70. The example test is rewarded with a bronze medal. Maybe some more blabla for the user.</p>
+            <p class="warning-text" id="warning-text-information-checklist">This is an example text for a resulting value of less than
+                50. The user is made aware of this with a warning. Maybe some more blabla for the user.</p>
+        </div>
+    </div>
+    <hr class="horizontal-separator">
+    <h2>Data Sharing and Subject Access</h2>
+    <div class="recommendation" id="no-data-checklist">
+        This checklist has not yet been completed.
+    </div>
+    <div class="score-box" id="score-box-data-checklist">
+        <div class="row">
+            <img alt="Result" class="gold-medal" id="gold-medal-data-checklist" src="../resources/images/goldmedal.png">
+            <img alt="Result" class="silver-medal" id="silver-medal-data-checklist" src="../resources/images/silvermedal.png">
+            <img alt="Result" class="bronze-medal" id="bronze-medal-data-checklist" src="../resources/images/bronzemedal.png">
+            <img alt="Result" class="warning-sign" id="warning-sign-data-checklist" src="../resources/images/warning.png">
+            <p class="gold-text" id="gold-text-data-checklist">This is an example text for a resulting value greater than 90.
+                The example test is rewarded with a gold medal. Maybe some more blabla for the user.</p>
+            <p class="silver-text" id="silver-text-data-checklist">This is an example text for a resulting value between 70 and
+                90. The example test is rewarded with a silver medal. Maybe some more blabla for the user.</p>
+            <p class="bronze-text" id="bronze-text-data-checklist">This is an example text for a resulting value between 50 and
+                70. The example test is rewarded with a bronze medal. Maybe some more blabla for the user.</p>
+            <p class="warning-text" id="warning-text-data-checklist">This is an example text for a resulting value of less than
+                50. The user is made aware of this with a warning. Maybe some more blabla for the user.</p>
+        </div>
+    </div>
+    <hr class="horizontal-separator">
+    <h2>Record Management</h2>
+    <div class="recommendation" id="no-record-checklist">
+        This checklist has not yet been completed.
+    </div>
+    <div class="score-box" id="score-box-record-checklist">
+        <div class="row">
+            <img alt="Result" class="gold-medal" id="gold-medal-record-checklist" src="../resources/images/goldmedal.png">
+            <img alt="Result" class="silver-medal" id="silver-medal-record-checklist" src="../resources/images/silvermedal.png">
+            <img alt="Result" class="bronze-medal" id="bronze-medal-record-checklist" src="../resources/images/bronzemedal.png">
+            <img alt="Result" class="warning-sign" id="warning-sign-record-checklist" src="../resources/images/warning.png">
+            <p class="gold-text" id="gold-text-record-checklist">This is an example text for a resulting value greater than 90.
+                The example test is rewarded with a gold medal. Maybe some more blabla for the user.</p>
+            <p class="silver-text" id="silver-text-record-checklist">This is an example text for a resulting value between 70 and
+                90. The example test is rewarded with a silver medal. Maybe some more blabla for the user.</p>
+            <p class="bronze-text" id="bronze-text-record-checklist">This is an example text for a resulting value between 50 and
+                70. The example test is rewarded with a bronze medal. Maybe some more blabla for the user.</p>
+            <p class="warning-text" id="warning-text-record-checklist">This is an example text for a resulting value of less than
+                50. The user is made aware of this with a warning. Maybe some more blabla for the user.</p>
+        </div>
+    </div>
+    <hr class="horizontal-separator">
+    <h2>Consent</h2>
+    <div class="recommendation" id="no-consent-checklist">
+        This checklist has not yet been completed.
+    </div>
+    <div class="score-box" id="score-box-consent-checklist">
+        <div class="row">
+            <img alt="Result" class="gold-medal" id="gold-medal-consent-checklist" src="../resources/images/goldmedal.png">
+            <img alt="Result" class="silver-medal" id="silver-medal-consent-checklist" src="../resources/images/silvermedal.png">
+            <img alt="Result" class="bronze-medal" id="bronze-medal-consent-checklist" src="../resources/images/bronzemedal.png">
+            <img alt="Result" class="warning-sign" id="warning-sign-consent-checklist" src="../resources/images/warning.png">
+            <p class="gold-text" id="gold-text-consent-checklist">This is an example text for a resulting value greater than 90.
+                The example test is rewarded with a gold medal. Maybe some more blabla for the user.</p>
+            <p class="silver-text" id="silver-text-consent-checklist">This is an example text for a resulting value between 70 and
+                90. The example test is rewarded with a silver medal. Maybe some more blabla for the user.</p>
+            <p class="bronze-text" id="bronze-text-consent-checklist">This is an example text for a resulting value between 50 and
+                70. The example test is rewarded with a bronze medal. Maybe some more blabla for the user.</p>
+            <p class="warning-text" id="warning-text-consent-checklist">This is an example text for a resulting value of less than
+                50. The user is made aware of this with a warning. Maybe some more blabla for the user.</p>
+        </div>
+    </div>
+    <button id="myTopBtn" onclick="topFunction()" title="Go to top">Top</button>
+</div>
+</body>
 </html>

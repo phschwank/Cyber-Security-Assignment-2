@@ -33,6 +33,7 @@ footer, header, hgroup, menu, nav, section {
 body {
     line-height: 1.1;
     background-color: #efecea;
+    margin-bottom: 20px;
 }
 
 /*ol, ul {
@@ -302,7 +303,7 @@ tbody {
     margin-left: 10px;
 }
 
-.warning {
+.warning-sign {
     display: none;
     width: 100px;
     height: 100px;

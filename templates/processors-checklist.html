@@ -1,275 +1,354 @@
 <!DOCTYPE html>
 <html lang="eng" xml:lang="eng">
-    <link rel="stylesheet" href="../resources/css/stylesheet.css">
-    <head>
-        <title>Processors Checklist</title>
-        <script language="javascript" type="text/javascript" src="../resources/js/javascript.js" defer></script>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div class="header">
-
-            <div id="navbar" class="navbar">
-                <a href="../index.html">Home</a>
-<!--                <a href="overview-results.html">Overview / Results</a>-->
-                <div class="dropdown">
-                    <button class="dropbtn">Assessments
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="controllers-checklist.html">Controllers Checklist</a>
-                        <a href="#">Processors Checklist</a>
-                        <a href="information-security.html">Information Security</a>
-                        <a href="data-sharing.html">Data Sharing and Subject Access</a>
-                        <a href="record-management.html">Record Management</a>
-                        <a href="consent-checklist.html">Consent Checklist</a>
-                    </div>
-                </div>
+<link href="../resources/css/stylesheet.css" rel="stylesheet">
+<head>
+    <title>Processors Checklist</title>
+    <script defer language="javascript" src="../resources/js/javascript.js" type="text/javascript"></script>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+</head>
+<body>
+<div class="header">
+    <div class="navbar" id="navbar">
+        <a href="../index.html">Home</a>
+        <a href="overview-results.html">Overview / Results</a>
+        <div class="dropdown">
+            <button class="dropbtn">Assessments
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="controllers-checklist.html">Controllers Checklist</a>
+                <a href="#">Processors Checklist</a>
+                <a href="information-security.html">Information Security</a>
+                <a href="data-sharing.html">Data Sharing and Subject Access</a>
+                <a href="record-management.html">Record Management</a>
+                <a href="consent-checklist.html">Consent Checklist</a>
             </div>
-            <h1>Processors Checklist</h1>
-            <h3>Index Page Intro Text. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</h3>
         </div>
-        <div class="content">
-          <h2>Documentation</h2>
-          <h3>1.1 Information you hold</h3>
-          <!----------------------------->
-          <!-- QUESTION 1              -->
-          <!----------------------------->
-          <p class="text-padding">Do you have performed an information audit to map data flows in your organisation?</p>
-          <div class="column">
-              <div class="input-row">
-                  <label for="evaluation1">Choose:</label>
-                  <select id="evaluation1" class="form-control" onchange="showRecommendation('1')" name="question">
-                      <option value="3">Successfully implemented</option>
-                      <option value="2">Partly implemented</option>
-                      <option value="1">Planned to implement</option>
-                      <option value="0">Not yet implemented or planned</option>
-                      <option value="na">Not applicable</option>
-                  </select>
-              </div>
-              <div id="recommendation1" class="recommendation">
-                  Make sure you have an appropriate documentation of the data flows in your organisation!
-              </div>
-          </div>
-          <button class="accordion">More Information</button>
-          <div class="panel">
-              <p class="text-padding">
-                  <ul class="specification-list-level-one">
-                    <li>Perform an audit across your entire organisation or within particular business areas.</li>
-                      <ul class="specification-list-level-two">
-                        <li>Choose a person with an in-depth knowledge of your business to do it.</li>
-                        <li>This allows you to identify the data you process and how it flows into, through and out of your
-                        organisation. Such a data flow can include a transfer of information from one departement to another.
-                        However, this can also include the transfer between e.g. different locations, external partner
-                        organisations or suppliers.</li>
-                      </ul>
-                    <br><br>
-                    <li>It is necessary to identify different key elements.</li>
-                      <ul class="specification-list-level-two">
-                        <li>This can include the data types and
-                        its format, its transfer method, its location and the clarification of the data accountability and
-                        data access.</li>
-                      </ul>
-                    <br><br>
-                    <li>Such data mapping and data flows are important to be compliant with the following GDPR articles:</li>
-                      <ul class="specification-list-level-two">
-                        <li><a href="https://gdpr-info.eu/art-30-gdpr/" target="_blank">Article 30</a></li>
-                        <li><a href="https://gdpr-info.eu/art-36-gdpr/" target="_blank">Article 36</a></li>
-                      </ul>
-                    <br><br>
-                    <li>Further information can be found <a href="https://www.itgovernance.eu/en-ie/gdpr-data-mapping-ie" target="_blank">here</a>
-                    and <a href="https://www.clarip.com/data-privacy/gdpr-data-flow-mapping/" target="_blank">here</a>.</li>
-                    <br><br>
-                    <li>Templates for this task can be found <a href="https://cloudnine.com/ediscoverydaily/electronic-discovery/unsure-about-how-to-map-your-data-for-gdpr-here-are-several-templates-to-get-started-data-privacy-best-practices/" target="_blank">here</a>.</li>
-                  </ul>
-                  <br><br>
-              </p>
-          </div>
-          <hr class="horizontal-separator">
-          <!----------------------------->
-          <!-- QUESTION 2              -->
-          <!----------------------------->
-          <p class="text-padding">Do you have documented what personal data you hold of your customers, employees, etc., where it came from,
-                  who you share it with and what you do with it?</p>
-          <div class="column">
-              <div class="input-row">
-                  <label for="evaluation2">Choose:</label>
-                  <select id="evaluation2" class="form-control" onchange="showRecommendation('2')" name="question">
-                      <option value="3">Successfully implemented</option>
-                      <option value="2">Partly implemented</option>
-                      <option value="1">Planned to implement</option>
-                      <option value="0">Not yet implemented or planned</option>
-                      <option value="na">Not applicable</option>
-                  </select>
-              </div>
-              <div id="recommendation2" class="recommendation">
-                  Make sure to document the properties and features of the personal data collected and processed appropriate!
-              </div>
-          </div>
-          <button class="accordion">More Information</button>
-          <div class="panel">
-              <p class="text-padding">
-                <ul class="specification-list-level-one">
-                  <li>The term "personal data" is in the center of GDPR, because it only applies if data processing concers personal data.
-                  It contains any information which are related to an identified or identifiable natural person.</li>
-                  <br><br>
-                  <li>According to GDPR a natural person or also called data subject is identifiable if they can be directly or indirectly
-                    identified through the data.</li>
-                  <ul class="specification-list-level-two">
-                    <li>This can e.g. be a name, an identification number, location data, number plate or any characteristics,
-                      which expresses the physical, physiological, genetic, mental, commercial, cultural or social identity of these persons.</li>
-                    <li>More information about personal data and its processing guidelines can be found
-                    <a href="https://gdpr-info.eu/issues/personal-data/#:~:text=Personal%20data%20are%20any%20information,identified%20or%20identifiable%20natural%20person.&text=For%20example%2C%20the%20telephone%2C%20credit,address%20are%20all%20personal%20data." target="_blank">here</a>
+    </div>
+    <h1>Processors Checklist</h1>
+    <h3>Index Page Intro Text. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+        sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</h3>
+</div>
+<div class="content">
+    <h2>Documentation</h2>
+    <h3>1.1 Information you hold</h3>
+    <!----------------------------->
+    <!-- QUESTION 1              -->
+    <!----------------------------->
+    <p class="text-padding">Do you have performed an information audit to map data flows in your organisation?</p>
+    <div class="column">
+        <div class="input-row">
+            <label for="evaluation1">Choose:</label>
+            <select class="form-control" id="evaluation1" name="question" onchange="showRecommendation('1')">
+                <option value="3">Successfully implemented</option>
+                <option value="2">Partly implemented</option>
+                <option value="1">Planned to implement</option>
+                <option value="0">Not yet implemented or planned</option>
+                <option value="na">Not applicable</option>
+            </select>
+        </div>
+        <div class="recommendation" id="recommendation1">
+            Make sure you have an appropriate documentation of the data flows in your organisation!
+        </div>
+    </div>
+    <button class="accordion">More Information</button>
+    <div class="panel">
+        <p class="text-padding">
+        <ul class="specification-list-level-one">
+            <li>Perform an audit across your entire organisation or within particular business areas.</li>
+            <ul class="specification-list-level-two">
+                <li>Choose a person with an in-depth knowledge of your business to do it.</li>
+                <li>This allows you to identify the data you process and how it flows into, through and out of your
+                    organisation. Such a data flow can include a transfer of information from one departement to
+                    another.
+                    However, this can also include the transfer between e.g. different locations, external partner
+                    organisations or suppliers.
+                </li>
+            </ul>
+            <br><br>
+            <li>It is necessary to identify different key elements.</li>
+            <ul class="specification-list-level-two">
+                <li>This can include the data types and
+                    its format, its transfer method, its location and the clarification of the data accountability and
+                    data access.
+                </li>
+            </ul>
+            <br><br>
+            <li>Such data mapping and data flows are important to be compliant with the following GDPR articles:</li>
+            <ul class="specification-list-level-two">
+                <li><a href="https://gdpr-info.eu/art-30-gdpr/" target="_blank">Article 30</a></li>
+                <li><a href="https://gdpr-info.eu/art-36-gdpr/" target="_blank">Article 36</a></li>
+            </ul>
+            <br><br>
+            <li>Further information can be found <a href="https://www.itgovernance.eu/en-ie/gdpr-data-mapping-ie"
+                                                    target="_blank">here</a>
+                and <a href="https://www.clarip.com/data-privacy/gdpr-data-flow-mapping/" target="_blank">here</a>.
+            </li>
+            <br><br>
+            <li>Templates for this task can be found <a
+                    href="https://cloudnine.com/ediscoverydaily/electronic-discovery/unsure-about-how-to-map-your-data-for-gdpr-here-are-several-templates-to-get-started-data-privacy-best-practices/"
+                    target="_blank">here</a>.
+            </li>
+        </ul>
+        <br><br>
+        </p>
+    </div>
+    <hr class="horizontal-separator">
+    <!----------------------------->
+    <!-- QUESTION 2              -->
+    <!----------------------------->
+    <p class="text-padding">Do you have documented what personal data you hold of your customers, employees, etc., where
+        it came from,
+        who you share it with and what you do with it?</p>
+    <div class="column">
+        <div class="input-row">
+            <label for="evaluation2">Choose:</label>
+            <select class="form-control" id="evaluation2" name="question" onchange="showRecommendation('2')">
+                <option value="3">Successfully implemented</option>
+                <option value="2">Partly implemented</option>
+                <option value="1">Planned to implement</option>
+                <option value="0">Not yet implemented or planned</option>
+                <option value="na">Not applicable</option>
+            </select>
+        </div>
+        <div class="recommendation" id="recommendation2">
+            Make sure to document the properties and features of the personal data collected and processed appropriate!
+        </div>
+    </div>
+    <button class="accordion">More Information</button>
+    <div class="panel">
+        <p class="text-padding">
+        <ul class="specification-list-level-one">
+            <li>The term "personal data" is in the center of GDPR, because it only applies if data processing concers
+                personal data.
+                It contains any information which are related to an identified or identifiable natural person.
+            </li>
+            <br><br>
+            <li>According to GDPR a natural person or also called data subject is identifiable if they can be directly
+                or indirectly
+                identified through the data.
+            </li>
+            <ul class="specification-list-level-two">
+                <li>This can e.g. be a name, an identification number, location data, number plate or any
+                    characteristics,
+                    which expresses the physical, physiological, genetic, mental, commercial, cultural or social
+                    identity of these persons.
+                </li>
+                <li>More information about personal data and its processing guidelines can be found
+                    <a href="https://gdpr-info.eu/issues/personal-data/#:~:text=Personal%20data%20are%20any%20information,identified%20or%20identifiable%20natural%20person.&text=For%20example%2C%20the%20telephone%2C%20credit,address%20are%20all%20personal%20data."
+                       target="_blank">here</a>
                     and in <a href="https://gdpr-info.eu/art-4-gdpr/" target="_blank">Article 4</a> and
-                    <a href="https://gdpr-info.eu/art-9-gdpr/" target="_blank">Article 9</a> of GDPR.</li>
-                  </ul>
-                  <br><br>
-                  <li>To fullfil this task it is recommended to document the findings of the question before in an information asset register.</li>
-                  <ul class="specification-list-level-two">
-                    <li>This register records data like the name and details of your organisation, the categories of the processing
-                      carried out on behalf of each controller, a description of technical and organisational security measures, etc.</li>
-                    <li>It provides an institutionwide view of all information assets and will provide insights to improve the management
-                      and security of the information. Further, it allows a reasonable and proportionate approach to mitigate risks and minimize the effect of both cyber and business disruptions.</li>
-                    <li>More information about the information asset register can be found
-                    <a href="https://matomo.org/blog/2018/04/gdpr-how-to-fill-in-the-information-asset-register-when-using-matomo/" target="_blank">here</a> and
-                    <a href="https://www.corporatecomplianceinsights.com/organizations-need-information-asset-register/" target="_blank">here</a>.
+                    <a href="https://gdpr-info.eu/art-9-gdpr/" target="_blank">Article 9</a> of GDPR.
+                </li>
+            </ul>
+            <br><br>
+            <li>To fullfil this task it is recommended to document the findings of the question before in an information
+                asset register.
+            </li>
+            <ul class="specification-list-level-two">
+                <li>This register records data like the name and details of your organisation, the categories of the
+                    processing
+                    carried out on behalf of each controller, a description of technical and organisational security
+                    measures, etc.
+                </li>
+                <li>It provides an institutionwide view of all information assets and will provide insights to improve
+                    the management
+                    and security of the information. Further, it allows a reasonable and proportionate approach to
+                    mitigate risks and minimize the effect of both cyber and business disruptions.
+                </li>
+                <li>More information about the information asset register can be found
+                    <a href="https://matomo.org/blog/2018/04/gdpr-how-to-fill-in-the-information-asset-register-when-using-matomo/"
+                       target="_blank">here</a> and
+                    <a href="https://www.corporatecomplianceinsights.com/organizations-need-information-asset-register/"
+                       target="_blank">here</a>.
                     Templates and additional guidelines can be found
-                    <a href="https://network.healthwatch.co.uk/guidance/2019-02-05/information-asset-register-guidance-and-template" target="_blank">here</a>.</li>
-                  </ul>
-                </ul>
-                <br><br>
-              </p>
-          </div>
-          <hr class="horizontal-separator">
+                    <a href="https://network.healthwatch.co.uk/guidance/2019-02-05/information-asset-register-guidance-and-template"
+                       target="_blank">here</a>.
+                </li>
+            </ul>
+        </ul>
+        <br><br>
+        </p>
+    </div>
+    <hr class="horizontal-separator">
 
-          <h2>Accountability and Governance</h2>
-          <h3>2.1 Accountability</h3>
-          <!----------------------------->
-          <!-- QUESTION 3              -->
-          <!----------------------------->
-          <div class="row">
-              <p class="text-padding">Do you have an appropriate data protection policy?</p>
-          </div>
-          <div class="column">
-              <div class="input-row">
-                  <label for="evaluation3">Choose:</label>
-                  <select id="evaluation3" class="form-control" onchange="showRecommendation('3')" name="question">
-                      <option value="3">Successfully implemented</option>
-                      <option value="2">Partly implemented</option>
-                      <option value="1">Planned to implement</option>
-                      <option value="0">Not yet implemented or planned</option>
-                      <option value="na">Not applicable</option>
-                  </select>
-              </div>
-              <div id="recommendation3" class="recommendation">
-                  Make sure that you address data protection in a consistent manner and that you can demonstrate that!
-              </div>
-          </div>
-          <button class="accordion">More Information</button>
-          <div class="panel">
-              <p class="text-padding">
-              <ul class="specification-list-level-one">
-                  <li>GDPR requires your organisation to show how you comply with the six principles of data protection.
-                    You can read more about those
-                    <a href="https://www.itgovernance.eu/blog/en/the-gdpr-understanding-the-6-data-protection-principles" target="_blank">here</a>
-                    and in <a href="https://gdpr-info.eu/art-5-gdpr/" target="_blank">Article 5</a> of the GDPR guidelines.</li>
-                    <br><br>
-                  <li>A data protection policy is an internal document that works as the core of the GDPR compliance practices in an organisation.
-                    It explains GDPR requirements to employees and states the commitment to compliance. However, it does not need to provide specific
-                    details on how the data protection principles will be met. These will be covered in the organisation's procedures.</li>
-                    <br><br>
-                  <li>A data protection policy provides various benefits like:</li>
-                      <ul class="specification-list-level-two">
-                          <li>It provides the groundwork to achieve GDPR compliance.</li>
-                          <li>It helps to address data protection in a consistent manner and to demonstrate accountability according to GDPR.</li>
-                          <li>It works as a Cheat-Sheet with breaking down GDPR requirements into manageable and understandable chunks.
-                            This makes GDPR also easier understandable to non-experts and your employees.</li>
-                          <li>It proves that an organisation is committed to preventing data protection breaches.</li>
-                      </ul>
-                      <br><br>
-                  <li>In a data protection policy the following six points should be included:</li>
-                  <ul class="specification-list-level-two">
-                      <li>The purpose of the data protection policy.</li>
-                      <li>Definitions of key terms in GDPR.</li>
-                      <li>The scope of the policy.</li>
-                      <li>Explanations of the six data protection principles and the accountability.</li>
-                      <li>The data subjects rights.</li>
-                      <li>The responsible DPO (data protection officer).</li>
-                  </ul>
-                  <br><br>
-                  <li>The data protection policy should be approved by the organisation's management. Further, it should be communicated to all employees.</li>
-                  <br><br>
-                  <li>You can find more information about the data protection policy, its scope and how to successfully introduce one to your organisation
-                    <a href="https://www.privacypolicies.com/blog/gdpr-data-protection-policy/" target="_blank">here</a> and
-                    <a href="https://www.itgovernance.co.uk/blog/how-to-write-a-gdpr-data-protection-policy#:~:text=A%20data%20protection%20policy%20is,the%20organisation%27s%20commitment%20to%20compliance.&text=Take%20data%20minimisation%20as%20an%20example." target="_blank">here</a>.</li>
-                  <br><br>
-              </ul>
-              </p>
-          </div>
-          <hr class="horizontal-separator">
-
-          <h3>2.2 Data Protection Officer</h3>
-          <!----------------------------->
-          <!-- QUESTION 4              -->
-          <!----------------------------->
-          <div class="row">
-              <p class="text-padding">Do you have a data protection lead or a Data Protection Officer in charge?</p>
-          </div>
-          <div class="column">
-              <div class="input-row">
-                  <label for="evaluation4">Choose:</label>
-                  <select id="evaluation4" class="form-control" onchange="showRecommendation('4')" name="question">
-                      <option value="3">Successfully implemented</option>
-                      <option value="2">Partly implemented</option>
-                      <option value="1">Planned to implement</option>
-                      <option value="0">Not yet implemented or planned</option>
-                      <option value="na">Not applicable</option>
-                  </select>
-              </div>
-              <div id="recommendation4" class="recommendation">
-                  Make sure you have a data protection lead or a Data Protection Officer in charge for your organisation!
-              </div>
-          </div>
-          <button class="accordion">More Information</button>
-          <div class="panel">
-              <p class="text-padding">
-              <ul class="specification-list-level-one">
-                  <li>It is important that someone in your organisation takes responsibility for data protection compliance.
-                    Assigning a Data Protection Officer (DPO) is usually on a voluntary base unless:</li>
-                    <ul class="specification-list-level-two">
-                        <li>you are a public authority.</li>
-                        <li>you carry out large scale, regular and systematic monitoring of individuals.</li>
-                        <li>you carry out large scale processing of special categories of data like data related to criminal convictions and offences.</li>
-                    </ul>
-                    <br><br>
-                  <li>However, it may be useful to voluntarily nominate a DPO. A DPO works independently, reports to the highest management and has
-                  adequate resources to enable the organisation to meet GDPR compliance. According to GDPR a DPO has the following six major tasks:</li>
-                      <ul class="specification-list-level-two">
-                          <li>Receive comments and questions from data subjects about the processing of their personal data and GDPR.</li>
-                          <li>Inform the organisation and its employees of their obligations under GDPR and other data protection provisions.</li>
-                          <li>Monitor compliance with GDPR and any other applicable data protection provisions, train staff on compliance and perform audits.</li>
-                          <li>Perform data protection impact assessments if required.</li>
-                          <li>Collaborate with data protection supervisory authority.</li>
-                          <li>Act as the focal point for data protection supervisory authority on matters related to the processing of personal data
-                            and other matters.</li>
-                      </ul>
-                  <li>You can find more information about the role and tasks of a DPO
-                    <a href="https://gdpr.eu/data-protection-officer/" target="_blank">here</a>,
-                    <a href="https://gdpr-info.eu/issues/data-protection-officer/" target="_blank">here</a> and in GDPR
-                    <a href="https://gdpr-info.eu/art-37-gdpr/" target="_blank">Article 37</a>,
-                    <a href="https://gdpr-info.eu/art-38-gdpr/" target="_blank">Article 38</a> and
-                    <a href="https://gdpr-info.eu/art-39-gdpr/" target="_blank">Article 39</a></li>
-              </ul>
-              <br><br>
-              </p>
-              You can also find more information about the what a DPO is and the responsibilities and benefits of nominating one in the video below.
-              <br><br>
-              <iframe class="embedded-video" src="https://www.youtube.com/embed/PpbbZ2oV1AY"></iframe>
-          </div>
-          <hr class="horizontal-separator">
-
+    <h2>Accountability and Governance</h2>
+    <h3>2.1 Accountability</h3>
+    <!----------------------------->
+    <!-- QUESTION 3              -->
+    <!----------------------------->
+    <div class="row">
+        <p class="text-padding">Do you have an appropriate data protection policy?</p>
+    </div>
+    <div class="column">
+        <div class="input-row">
+            <label for="evaluation3">Choose:</label>
+            <select class="form-control" id="evaluation3" name="question" onchange="showRecommendation('3')">
+                <option value="3">Successfully implemented</option>
+                <option value="2">Partly implemented</option>
+                <option value="1">Planned to implement</option>
+                <option value="0">Not yet implemented or planned</option>
+                <option value="na">Not applicable</option>
+            </select>
         </div>
-    </body>
+        <div class="recommendation" id="recommendation3">
+            Make sure that you address data protection in a consistent manner and that you can demonstrate that!
+        </div>
+    </div>
+    <button class="accordion">More Information</button>
+    <div class="panel">
+        <p class="text-padding">
+        <ul class="specification-list-level-one">
+            <li>GDPR requires your organisation to show how you comply with the six principles of data protection.
+                You can read more about those
+                <a href="https://www.itgovernance.eu/blog/en/the-gdpr-understanding-the-6-data-protection-principles"
+                   target="_blank">here</a>
+                and in <a href="https://gdpr-info.eu/art-5-gdpr/" target="_blank">Article 5</a> of the GDPR guidelines.
+            </li>
+            <br><br>
+            <li>A data protection policy is an internal document that works as the core of the GDPR compliance practices
+                in an organisation.
+                It explains GDPR requirements to employees and states the commitment to compliance. However, it does not
+                need to provide specific
+                details on how the data protection principles will be met. These will be covered in the organisation's
+                procedures.
+            </li>
+            <br><br>
+            <li>A data protection policy provides various benefits like:</li>
+            <ul class="specification-list-level-two">
+                <li>It provides the groundwork to achieve GDPR compliance.</li>
+                <li>It helps to address data protection in a consistent manner and to demonstrate accountability
+                    according to GDPR.
+                </li>
+                <li>It works as a Cheat-Sheet with breaking down GDPR requirements into manageable and understandable
+                    chunks.
+                    This makes GDPR also easier understandable to non-experts and your employees.
+                </li>
+                <li>It proves that an organisation is committed to preventing data protection breaches.</li>
+            </ul>
+            <br><br>
+            <li>In a data protection policy the following six points should be included:</li>
+            <ul class="specification-list-level-two">
+                <li>The purpose of the data protection policy.</li>
+                <li>Definitions of key terms in GDPR.</li>
+                <li>The scope of the policy.</li>
+                <li>Explanations of the six data protection principles and the accountability.</li>
+                <li>The data subjects rights.</li>
+                <li>The responsible DPO (data protection officer).</li>
+            </ul>
+            <br><br>
+            <li>The data protection policy should be approved by the organisation's management. Further, it should be
+                communicated to all employees.
+            </li>
+            <br><br>
+            <li>You can find more information about the data protection policy, its scope and how to successfully
+                introduce one to your organisation
+                <a href="https://www.privacypolicies.com/blog/gdpr-data-protection-policy/" target="_blank">here</a> and
+                <a href="https://www.itgovernance.co.uk/blog/how-to-write-a-gdpr-data-protection-policy#:~:text=A%20data%20protection%20policy%20is,the%20organisation%27s%20commitment%20to%20compliance.&text=Take%20data%20minimisation%20as%20an%20example."
+                   target="_blank">here</a>.
+            </li>
+            <br><br>
+        </ul>
+        </p>
+    </div>
+    <hr class="horizontal-separator">
+
+    <h3>2.2 Data Protection Officer</h3>
+    <!----------------------------->
+    <!-- QUESTION 4              -->
+    <!----------------------------->
+    <div class="row">
+        <p class="text-padding">Do you have a data protection lead or a Data Protection Officer in charge?</p>
+    </div>
+    <div class="column">
+        <div class="input-row">
+            <label for="evaluation4">Choose:</label>
+            <select class="form-control" id="evaluation4" name="question" onchange="showRecommendation('4')">
+                <option value="3">Successfully implemented</option>
+                <option value="2">Partly implemented</option>
+                <option value="1">Planned to implement</option>
+                <option value="0">Not yet implemented or planned</option>
+                <option value="na">Not applicable</option>
+            </select>
+        </div>
+        <div class="recommendation" id="recommendation4">
+            Make sure you have a data protection lead or a Data Protection Officer in charge for your organisation!
+        </div>
+    </div>
+    <button class="accordion">More Information</button>
+    <div class="panel">
+        <p class="text-padding">
+        <ul class="specification-list-level-one">
+            <li>It is important that someone in your organisation takes responsibility for data protection compliance.
+                Assigning a Data Protection Officer (DPO) is usually on a voluntary base unless:
+            </li>
+            <ul class="specification-list-level-two">
+                <li>you are a public authority.</li>
+                <li>you carry out large scale, regular and systematic monitoring of individuals.</li>
+                <li>you carry out large scale processing of special categories of data like data related to criminal
+                    convictions and offences.
+                </li>
+            </ul>
+            <br><br>
+            <li>However, it may be useful to voluntarily nominate a DPO. A DPO works independently, reports to the
+                highest management and has
+                adequate resources to enable the organisation to meet GDPR compliance. According to GDPR a DPO has the
+                following six major tasks:
+            </li>
+            <ul class="specification-list-level-two">
+                <li>Receive comments and questions from data subjects about the processing of their personal data and
+                    GDPR.
+                </li>
+                <li>Inform the organisation and its employees of their obligations under GDPR and other data protection
+                    provisions.
+                </li>
+                <li>Monitor compliance with GDPR and any other applicable data protection provisions, train staff on
+                    compliance and perform audits.
+                </li>
+                <li>Perform data protection impact assessments if required.</li>
+                <li>Collaborate with data protection supervisory authority.</li>
+                <li>Act as the focal point for data protection supervisory authority on matters related to the
+                    processing of personal data
+                    and other matters.
+                </li>
+            </ul>
+            <li>You can find more information about the role and tasks of a DPO
+                <a href="https://gdpr.eu/data-protection-officer/" target="_blank">here</a>,
+                <a href="https://gdpr-info.eu/issues/data-protection-officer/" target="_blank">here</a> and in GDPR
+                <a href="https://gdpr-info.eu/art-37-gdpr/" target="_blank">Article 37</a>,
+                <a href="https://gdpr-info.eu/art-38-gdpr/" target="_blank">Article 38</a> and
+                <a href="https://gdpr-info.eu/art-39-gdpr/" target="_blank">Article 39</a></li>
+        </ul>
+        <br><br>
+        </p>
+        You can also find more information about the what a DPO is and the responsibilities and benefits of nominating
+        one in the video below.
+        <br><br>
+        <iframe class="embedded-video" src="https://www.youtube.com/embed/PpbbZ2oV1AY"></iframe>
+    </div>
+    <hr class="horizontal-separator">
+    <!----------------------------->
+    <!-- SCORE BOX               -->
+    <!----------------------------->
+    <div class="score-box" id="score-box">
+        <div class="row">
+            <img alt="Result" class="gold-medal" id="gold-medal" src="../resources/images/goldmedal.png">
+            <img alt="Result" class="silver-medal" id="silver-medal" src="../resources/images/silvermedal.png">
+            <img alt="Result" class="bronze-medal" id="bronze-medal" src="../resources/images/bronzemedal.png">
+            <img alt="Result" class="warning-sign" id="warning-sign" src="../resources/images/warning.png">
+            <p class="gold-text" id="gold-text">This is an example text for a resulting value greater than 90.
+                The example test is rewarded with a gold medal. Maybe some more blabla for the user.</p>
+            <p class="silver-text" id="silver-text">This is an example text for a resulting value between 70 and
+                90. The example test is rewarded with a silver medal. Maybe some more blabla for the user.</p>
+            <p class="bronze-text" id="bronze-text">This is an example text for a resulting value between 50 and
+                70. The example test is rewarded with a bronze medal. Maybe some more blabla for the user.</p>
+            <p class="warning-text" id="warning-text">This is an example text for a resulting value of less than
+                50. The user is made aware of this with a warning. Maybe some more blabla for the user.</p>
+        </div>
+    </div>
+    <button class="interaction-button" id="submit-button" onclick="countPoints('processorsChecklist')">Submit</button>
+    <button id="myTopBtn" onclick="topFunction()" title="Go to top">Top</button>
+</div>
+</body>
 </html>

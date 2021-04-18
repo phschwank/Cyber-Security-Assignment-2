@@ -1,330 +1,377 @@
 <!DOCTYPE html>
 <html lang="eng" xml:lang="eng">
-    <link rel="stylesheet" href="../resources/css/stylesheet.css">
-    <head>
-        <title>Controllers Checklist</title>
-        <script language="javascript" type="text/javascript" src="../resources/js/javascript.js" defer></script>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div class="header">
-
-            <div id="navbar" class="navbar">
-                <a href="../index.html">Home</a>
-<!--                <a href="overview-results.html">Overview / Results</a>-->
-                <div class="dropdown">
-                    <button class="dropbtn">Assessments
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="#">Controllers Checklist</a>
-                        <a href="processors-checklist.html">Processors Checklist</a>
-                        <a href="information-security.html">Information Security</a>
-                        <a href="data-sharing.html">Data Sharing and Subject Access</a>
-                        <a href="record-management.html">Record Management</a>
-                        <a href="consent-checklist.html">Consent Checklist</a>
-                    </div>
-                </div>
+<link href="../resources/css/stylesheet.css" rel="stylesheet">
+<head>
+    <title>Controllers Checklist</title>
+    <script defer language="javascript" src="../resources/js/javascript.js" type="text/javascript"></script>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+</head>
+<body>
+<div class="header">
+    <div class="navbar" id="navbar">
+        <a href="../index.html">Home</a>
+        <a href="overview-results.html">Overview / Results</a>
+        <div class="dropdown">
+            <button class="dropbtn">Assessments
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Controllers Checklist</a>
+                <a href="processors-checklist.html">Processors Checklist</a>
+                <a href="information-security.html">Information Security</a>
+                <a href="data-sharing.html">Data Sharing and Subject Access</a>
+                <a href="record-management.html">Record Management</a>
+                <a href="consent-checklist.html">Consent Checklist</a>
             </div>
-            <h1>Controllers Checklist</h1>
-            <h3>Designed to help you, the controller, assess high-level compliance with data protection laws. Covers
-                individuals' rights, handling requests for personal data, consent, data breaches and data protection
-                impact assessments under the General Data Protection Regulations.</h3>
         </div>
-        <div class="content">
-            <h2>Lawfulness, Fairness and Transparency</h2>
-            <h3>1.1 Information you hold</h3>
-            <!----------------------------->
-            <!-- QUESTION 1              -->
-            <!----------------------------->
-            <p class="text-padding">Do you have performed an information audit to map data flows in your organisation?</p>
-            <div class="column">
-                <div class="input-row">
-                    <label for="evaluation1">Choose:</label>
-                    <select id="evaluation1" class="form-control" onchange="showRecommendation('1')" name="question">
-                        <option value="3">Successfully implemented</option>
-                        <option value="2">Partly implemented</option>
-                        <option value="1">Planned to implement</option>
-                        <option value="0">Not yet implemented or planned</option>
-                        <option value="na">Not applicable</option>
-                    </select>
-                </div>
-                <div id="recommendation1" class="recommendation">
-                    Make sure you have an appropriate documentation of the data flows in your organisation!
-                </div>
-            </div>
-            <button class="accordion">More Information</button>
-            <div class="panel">
-                <p class="text-padding">
-                    <ul class="specification-list-level-one">
-                      <li>Perform an audit across your entire organisation or within particular business areas.</li>
-                        <ul class="specification-list-level-two">
-                          <li>Choose a person with an in-depth knowledge of your business to do it.</li>
-                          <li>This allows you to identify the data you process and how it flows into, through and out of your
-                          organisation. Such a data flow can include a transfer of information from one departement to another.
-                          However, this can also include the transfer between e.g. different locations, external partner
-                          organisations or suppliers.</li>
-                        </ul>
-                      <br><br>
-                      <li>It is necessary to identify different key elements.</li>
-                        <ul class="specification-list-level-two">
-                          <li>This can include the data types and
-                          its format, its transfer method, its location and the clarification of the data accountability and
-                          data access.</li>
-                        </ul>
-                      <br><br>
-                      <li>Such data mapping and data flows are important to be compliant with the following GDPR articles:</li>
-                        <ul class="specification-list-level-two">
-                          <li><a href="https://gdpr-info.eu/art-30-gdpr/" target="_blank">Article 30</a></li>
-                          <li><a href="https://gdpr-info.eu/art-36-gdpr/" target="_blank">Article 36</a></li>
-                        </ul>
-                      <br><br>
-                      <li>Further information can be found <a href="https://www.itgovernance.eu/en-ie/gdpr-data-mapping-ie" target="_blank">here</a>
-                      and <a href="https://www.clarip.com/data-privacy/gdpr-data-flow-mapping/" target="_blank">here</a>.</li>
-                      <br><br>
-                      <li>Templates for this task can be found <a href="https://cloudnine.com/ediscoverydaily/electronic-discovery/unsure-about-how-to-map-your-data-for-gdpr-here-are-several-templates-to-get-started-data-privacy-best-practices/" target="_blank">here</a>.</li>
-                    </ul>
-                    <br><br>
-                </p>
-            </div>
-            <hr class="horizontal-separator">
-            <!----------------------------->
-            <!-- QUESTION 2              -->
-            <!----------------------------->
-            <p class="text-padding">Do you have documented what personal data you hold of your customers, employees, etc., where it came from,
-                    who you share it with and what you do with it?</p>
-            <div class="column">
-                <div class="input-row">
-                    <label for="evaluation2">Choose:</label>
-                    <select id="evaluation2" class="form-control" onchange="showRecommendation('2')" name="question">
-                        <option value="3">Successfully implemented</option>
-                        <option value="2">Partly implemented</option>
-                        <option value="1">Planned to implement</option>
-                        <option value="0">Not yet implemented or planned</option>
-                        <option value="na">Not applicable</option>
-                    </select>
-                </div>
-                <div id="recommendation2" class="recommendation">
-                    Make sure to document the properties and features of the personal data collected and processed appropriate!
-                </div>
-            </div>
-            <button class="accordion">More Information</button>
-            <div class="panel">
-                <p class="text-padding">
-                  <ul class="specification-list-level-one">
-                    <li>The term "personal data" is in the center of GDPR, because it only applies if data processing concers personal data.
-                    It contains any information which are related to an identified or identifiable natural person.</li>
-                    <br><br>
-                    <li>According to GDPR a natural person or also called data subject is identifiable if they can be directly or indirectly
-                      identified through the data.</li>
-                    <ul class="specification-list-level-two">
-                      <li>This can e.g. be a name, an identification number, location data, number plate or any characteristics,
-                        which expresses the physical, physiological, genetic, mental, commercial, cultural or social identity of these persons.</li>
-                      <li>More information about personal data and its processing guidelines can be found
-                      <a href="https://gdpr-info.eu/issues/personal-data/#:~:text=Personal%20data%20are%20any%20information,identified%20or%20identifiable%20natural%20person.&text=For%20example%2C%20the%20telephone%2C%20credit,address%20are%20all%20personal%20data." target="_blank">here</a>
-                      and in <a href="https://gdpr-info.eu/art-4-gdpr/" target="_blank">Article 4</a> and
-                      <a href="https://gdpr-info.eu/art-9-gdpr/" target="_blank">Article 9</a> of GDPR.</li>
-                    </ul>
-                    <br><br>
-                    <li>To fullfil this task it is recommended to document the findings of the question before in an information asset register.</li>
-                    <ul class="specification-list-level-two">
-                      <li>This register records data like the name and details of your organisation, the categories of the processing
-                        carried out on behalf of each controller, a description of technical and organisational security measures, etc.</li>
-                      <li>It provides an institutionwide view of all information assets and will provide insights to improve the management
-                        and security of the information. Further, it allows a reasonable and proportionate approach to mitigate risks and minimize the effect of both cyber and business disruptions.</li>
-                      <li>More information about the information asset register can be found
-                      <a href="https://matomo.org/blog/2018/04/gdpr-how-to-fill-in-the-information-asset-register-when-using-matomo/" target="_blank">here</a> and
-                      <a href="https://www.corporatecomplianceinsights.com/organizations-need-information-asset-register/" target="_blank">here</a>.
-                      Templates and additional guidelines can be found
-                      <a href="https://network.healthwatch.co.uk/guidance/2019-02-05/information-asset-register-guidance-and-template" target="_blank">here</a>.</li>
-                    </ul>
-                  </ul>
-                  <br><br>
-                </p>
-            </div>
-            <hr class="horizontal-separator">
-            <h3>1.2 Lawful Basis for Processing Personal Data</h3>
-            <!----------------------------->
-            <!-- QUESTION 3              -->
-            <!----------------------------->
-            <p class="text-padding">Do you have identified the lawful bases for processing personal data and documented them?</p>
-            <div class="column">
-                <div class="input-row">
-                    <label for="evaluation3">Choose:</label>
-                    <select id="evaluation3" class="form-control" onchange="showRecommendation('3')" name="question">
-                        <option value="3">Successfully implemented</option>
-                        <option value="2">Partly implemented</option>
-                        <option value="1">Planned to implement</option>
-                        <option value="0">Not yet implemented or planned</option>
-                        <option value="na">Not applicable</option>
-                    </select>
-                </div>
-                <div id="recommendation3" class="recommendation">
-                    Make sure you have a lawful basis for all the data you collect, store and process!
-                </div>
-            </div>
-            <button class="accordion">More Information</button>
-            <div class="panel">
-                <p class="text-padding">
-                  <ul class="specification-list-level-one">
-                    <li>The GDPR principles shall ensure that personal data is processed lawfully, fairly and transparently.</li>
-                      <ul class="specification-list-level-two">
-                        <li>You may only collect, store and process data if you have a lawful basis to do that!</li>
-                      </ul>
-                    <br><br>
-                    <li>GDPR defines the following six lawful bases:</li>
-                      <ul class="specification-list-level-two">
-                        <li><b>Consent</b> - you have the explicit consent of a natural person.</li>
-                        <li><b>Performance of a Contract</b> - you need to process someone's personal data to satisfy a contract to which the
-                        data subject is a party.</li>
-                        <li><b>Legitimate Interest</b> - you have a legitimate interest for processing someone's personal data. However,
-                        "fundamental rights and freedoms of the data subject" overrides your interests, especially if it's a child's data!</li>
-                        <li><b>Vital Interest</b> - you need to process someone's personal data to save somebody's life.</li>
-                        <li><b>Legal Requirement</b> - you need to process someone's personal data to comply with a legal obligation.</li>
-                        <li><b>Public Interest</b> - you need to process someone's personal data to perform a task in the public interest.</li>
-                      </ul>
-                    <br><br>
-                    <li>Choosing an appropriate lawful basis is of utmost importance!</li>
-                    <ul class="specification-list-level-two">
-                      <li>An inappropriate basis could result in an unlawful processing,
-                      noncompliant response to data subjects rights, and inadequate organisational and technical data processing controls.</li>
-                      <li>If a lawful basis is chosen, it cannot be changed afterwards. However, it is allowed to have multiple lawful bases.</li>
-                      <li>You can read more about that
-                      <a href="https://kirkpatrickprice.com/video/gdpr-fundamentals-legal-basis-for-processing/#:~:text=Video%20Transcript-,GDPR%20requires%20any%20organization%20processing%20personal%20data%20to%20have%20a,requirement%2C%20and%20a%20public%20interest." target="_blank">here</a>,
-                      <a href="https://gdpr.eu/gdpr-consent-requirements/" target="_blank">here</a>
-                      and in <a href="https://gdpr-info.eu/chapter-6/" target="_blank">Chapter 6</a> of the GDPR guidelines.</li>
-                    </ul>
-                  </ul>
-                  <br><br>
-                  You can also check the video below for further information.
-                  <br><br>
-                </p>
-                  <iframe class="embedded-video" src="https://www.youtube.com/embed/9MqKELY45HA"></iframe>
-            </div>
-            <hr class="horizontal-separator">
-            <h3>1.3 Consent</h3>
-            <!----------------------------->
-            <!-- QUESTION 4              -->
-            <!----------------------------->
-            <p class="text-padding">Do you have reviewed how you ask for and record consent?</p>
-            <div class="column">
-                <div class="input-row">
-                    <label for="evaluation4">Choose:</label>
-                    <select id="evaluation4" class="form-control" onchange="showRecommendation('4')" name="question">
-                        <option value="3">Successfully implemented</option>
-                        <option value="2">Partly implemented</option>
-                        <option value="1">Planned to implement</option>
-                        <option value="0">Not yet implemented or planned</option>
-                        <option value="na">Not applicable</option>
-                    </select>
-                </div>
-                <div id="recommendation4" class="recommendation">
-                    Make sure you record consents for data processing and the demands for it properly!
-                </div>
-            </div>
-            <button class="accordion">More Information</button>
-            <div class="panel">
-                <p class="text-padding">
-                  <ul class="specification-list-level-one">
-                    <li>GDPR sets a high standard for consent. However, often consent is not necessary and another lawful basis
-                    is more appropriate.</li>
-                    <br><br>
-                    <li>Consent means offering people genuine choice and control over how their data is used.</li>
-                    <br><br>
-                    <li>If you use consent as the lawful basis, regard the following:</li>
-                      <ul class="specification-list-level-two">
-                        <li>Keep consent requests prominent and separate from other terms and conditions.</li>
-                        <li>Avoid making consent a condition for service.</li>
-                        <li>Name your organisation and any third party organisations who rely on this consent.</li>
-                        <li>Keep records of what a natural person has consented to, including what you told them,
-                          and when and how they consented.</li>
-                        <li>Tell them they can withdraw consent at any time and how to do this.</li>
-                        <li>etc.</li>
-                      </ul>
-                    <br><br>
-                    <li>More information about the meaning of consent according to GDPR can be found
-                      <a href="https://gdpr-info.eu/issues/consent/" target="_blank">here</a> and
-                      <a href="https://gdpr.eu/gdpr-consent-requirements/" target="_blank">here</a>.
-                      More detailed information about how to obtain, record and manage consent can be found
-                      <a href="https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/consent/how-should-we-obtain-record-and-manage-consent/" target="_blank">here</a>.</li>
-                  </ul>
-                  <br><br>
-                  You can also check the video below for a short introduction to the meaning of consent according to GDPR.
-                  <br><br>
-                </p>
-                <iframe class="embedded-video" src="https://www.youtube.com/embed/o3aYgr_mjKg"></iframe>
-            </div>
-            <hr class="horizontal-separator">
-            <!----------------------------->
-            <!-- QUESTION 5              -->
-            <!----------------------------->
-            <p class="text-padding">Do you have systems to record and manage ongoing consent?</p>
-            <div class="column">
-                <div class="input-row">
-                    <label for="evaluation5">Choose:</label>
-                    <select id="evaluation5" class="form-control" onchange="showRecommendation('5')" name="question">
-                        <option value="3">Successfully implemented</option>
-                        <option value="2">Partly implemented</option>
-                        <option value="1">Planned to implement</option>
-                        <option value="0">Not yet implemented or planned</option>
-                        <option value="na">Not applicable</option>
-                    </select>
-                </div>
-                <div id="recommendation5" class="recommendation">
-                    Make sure you manage ongoing consent properly!
-                </div>
-            </div>
-            <button class="accordion">More Information</button>
-            <div class="panel">
-                <p class="text-padding">
-                  <ul class="specification-list-level-one">
-                    <li>The obligations of your business don't end with receiving consent! Reviewing consent is part of an
-                    ongoing relationship with individuals and not a one-off compliance box to tick and file away.</li>
-                    <br><br>
-                    <li>Consent must be kept under review and needs to be refreshed if anything changes. It is necessary
-                    to capture these reviews and record any changes.</li>
-                      <ul class="specification-list-level-two">
-                        <li>Use e.g. a privacy dashboard which allows people to access and update their consent settings.</li>
-                        <li>It is recommended to refresh consent automatically at appropriate intervals. The length of this interval
-                        is depending on the context but refreshing once every two years is an appropriate starting point.</li>
-                      </ul>
-                    <br><br>
-                    <li>For the case your current consent is not compliant with GDPR standards or poorly documented,
-                      seek new GDPR-compliant consent. Otherwise, identify a different lawful basis or stop data processing.</li>
-                    <br><br>
-                    <li>More information about how to obtain, record and manage consent can be found
-                      <a href="https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/consent/how-should-we-obtain-record-and-manage-consent/" target="_blank">here</a></li>
-                  </ul>
-                  <br><br>
-                </p>
-            </div>
-            <hr class="horizontal-separator">
-            <!----------------------------->
-            <!-- SCORE BOX               -->
-            <!----------------------------->
-            <div id="score-box" class="score-box">
-                <div class="row">
-                    <img src="../resources/images/goldmedal.png" alt="Result" id="gold-medal" class="gold-medal">
-                    <img src="../resources/images/silvermedal.png" alt="Result" id="silver-medal" class="silver-medal">
-                    <img src="../resources/images/bronzemedal.png" alt="Result" id="bronze-medal" class="bronze-medal">
-                    <img src="../resources/images/warning.png" alt="Result" id="warning" class="warning">
-                    <p id="gold-text" class="gold-text">This is an example text for a resulting value greater than 90.
-                        The example test is rewarded with a gold medal. Maybe some more blabla for the user.</p>
-                    <p id="silver-text" class="silver-text">This is an example text for a resulting value between 70 and
-                        90. The example test is rewarded with a silver medal. Maybe some more blabla for the user.</p>
-                    <p id="bronze-text" class="bronze-text">This is an example text for a resulting value between 50 and
-                        70. The example test is rewarded with a bronze medal. Maybe some more blabla for the user.</p>
-                    <p id="warning-text" class="warning-text">This is an example text for a resulting value of less than
-                        50. The user is made aware of this with a warning. Maybe some more blabla for the user.</p>
-                </div>
-            </div>
-            <div class="input-row">
-                <button class="interaction-button" id="submit-button" onclick="countPoints()">Submit</button>
-            </div>
-            <button onclick="topFunction()" id="myTopBtn" title="Go to top">Top</button>
+    </div>
+    <h1>Controllers Checklist</h1>
+    <h3>Designed to help you, the controller, assess high-level compliance with data protection laws. Covers
+        individuals' rights, handling requests for personal data, consent, data breaches and data protection
+        impact assessments under the General Data Protection Regulations.</h3>
+</div>
+<div class="content">
+    <h2>Lawfulness, Fairness and Transparency</h2>
+    <h3>1.1 Information you hold</h3>
+    <!----------------------------->
+    <!-- QUESTION 1              -->
+    <!----------------------------->
+    <p class="text-padding">Do you have performed an information audit to map data flows in your organisation?</p>
+    <div class="column">
+        <div class="input-row">
+            <label for="evaluation1">Choose:</label>
+            <select class="form-control" id="evaluation1" name="question" onchange="showRecommendation('1')">
+                <option value="3">Successfully implemented</option>
+                <option value="2">Partly implemented</option>
+                <option value="1">Planned to implement</option>
+                <option value="0">Not yet implemented or planned</option>
+                <option value="na">Not applicable</option>
+            </select>
         </div>
-    </body>
+        <div class="recommendation" id="recommendation1">
+            Make sure you have an appropriate documentation of the data flows in your organisation!
+        </div>
+    </div>
+    <button class="accordion">More Information</button>
+    <div class="panel">
+        <p class="text-padding">
+        <ul class="specification-list-level-one">
+            <li>Perform an audit across your entire organisation or within particular business areas.</li>
+            <ul class="specification-list-level-two">
+                <li>Choose a person with an in-depth knowledge of your business to do it.</li>
+                <li>This allows you to identify the data you process and how it flows into, through and out of your
+                    organisation. Such a data flow can include a transfer of information from one departement to
+                    another. However, this can also include the transfer between e.g. different locations, external
+                    partner organisations or suppliers.
+                </li>
+            </ul>
+            <br><br>
+            <li>It is necessary to identify different key elements.</li>
+            <ul class="specification-list-level-two">
+                <li>This can include the data types and
+                    its format, its transfer method, its location and the clarification of the data accountability and
+                    data access.
+                </li>
+            </ul>
+            <br><br>
+            <li>Such data mapping and data flows are important to be compliant with the following GDPR articles:</li>
+            <ul class="specification-list-level-two">
+                <li><a href="https://gdpr-info.eu/art-30-gdpr/" target="_blank">Article 30</a></li>
+                <li><a href="https://gdpr-info.eu/art-36-gdpr/" target="_blank">Article 36</a></li>
+            </ul>
+            <br><br>
+            <li>Further information can be found <a href="https://www.itgovernance.eu/en-ie/gdpr-data-mapping-ie"
+                                                    target="_blank">here</a>
+                and <a href="https://www.clarip.com/data-privacy/gdpr-data-flow-mapping/" target="_blank">here</a>.
+            </li>
+            <br><br>
+            <li>Templates for this task can be found <a
+                    href="https://cloudnine.com/ediscoverydaily/electronic-discovery/unsure-about-how-to-map-your-data-for-gdpr-here-are-several-templates-to-get-started-data-privacy-best-practices/"
+                    target="_blank">here</a>.
+            </li>
+        </ul>
+        <br><br>
+        </p>
+    </div>
+    <hr class="horizontal-separator">
+    <!----------------------------->
+    <!-- QUESTION 2              -->
+    <!----------------------------->
+    <p class="text-padding">Do you have documented what personal data you hold of your customers, employees, etc., where
+        it came from, who you share it with and what you do with it?</p>
+    <div class="column">
+        <div class="input-row">
+            <label for="evaluation2">Choose:</label>
+            <select class="form-control" id="evaluation2" name="question" onchange="showRecommendation('2')">
+                <option value="3">Successfully implemented</option>
+                <option value="2">Partly implemented</option>
+                <option value="1">Planned to implement</option>
+                <option value="0">Not yet implemented or planned</option>
+                <option value="na">Not applicable</option>
+            </select>
+        </div>
+        <div class="recommendation" id="recommendation2">
+            Make sure to document the properties and features of the personal data collected and processed appropriate!
+        </div>
+    </div>
+    <button class="accordion">More Information</button>
+    <div class="panel">
+        <p class="text-padding">
+        <ul class="specification-list-level-one">
+            <li>The term "personal data" is in the center of GDPR, because it only applies if data processing concers
+                personal data. It contains any information which are related to an identified or identifiable natural
+                person.
+            </li>
+            <br><br>
+            <li>According to GDPR a natural person or also called data subject is identifiable if they can be directly
+                or indirectly identified through the data.
+            </li>
+            <ul class="specification-list-level-two">
+                <li>This can e.g. be a name, an identification number, location data, number plate or any
+                    characteristics, which expresses the physical, physiological, genetic, mental, commercial, cultural
+                    or social identity of these persons.
+                </li>
+                <li>More information about personal data and its processing guidelines can be found
+                    <a href="https://gdpr-info.eu/issues/personal-data/#:~:text=Personal%20data%20are%20any%20information,identified%20or%20identifiable%20natural%20person.&text=For%20example%2C%20the%20telephone%2C%20credit,address%20are%20all%20personal%20data."
+                       target="_blank">here</a>
+                    and in <a href="https://gdpr-info.eu/art-4-gdpr/" target="_blank">Article 4</a> and
+                    <a href="https://gdpr-info.eu/art-9-gdpr/" target="_blank">Article 9</a> of GDPR.
+                </li>
+            </ul>
+            <br><br>
+            <li>To fullfil this task it is recommended to document the findings of the question before in an information
+                asset register.
+            </li>
+            <ul class="specification-list-level-two">
+                <li>This register records data like the name and details of your organisation, the categories of the
+                    processing carried out on behalf of each controller, a description of technical and organisational
+                    security measures, etc.
+                </li>
+                <li>It provides an institutionwide view of all information assets and will provide insights to improve
+                    the management and security of the information. Further, it allows a reasonable and proportionate
+                    approach to mitigate risks and minimize the effect of both cyber and business disruptions.
+                </li>
+                <li>More information about the information asset register can be found
+                    <a href="https://matomo.org/blog/2018/04/gdpr-how-to-fill-in-the-information-asset-register-when-using-matomo/"
+                       target="_blank">here</a> and
+                    <a href="https://www.corporatecomplianceinsights.com/organizations-need-information-asset-register/"
+                       target="_blank">here</a>.
+                    Templates and additional guidelines can be found
+                    <a href="https://network.healthwatch.co.uk/guidance/2019-02-05/information-asset-register-guidance-and-template"
+                       target="_blank">here</a>.
+                </li>
+            </ul>
+        </ul>
+        <br><br>
+        </p>
+    </div>
+    <hr class="horizontal-separator">
+    <h3>1.2 Lawful Basis for Processing Personal Data</h3>
+    <!----------------------------->
+    <!-- QUESTION 3              -->
+    <!----------------------------->
+    <p class="text-padding">Do you have identified the lawful bases for processing personal data and documented
+        them?</p>
+    <div class="column">
+        <div class="input-row">
+            <label for="evaluation3">Choose:</label>
+            <select class="form-control" id="evaluation3" name="question" onchange="showRecommendation('3')">
+                <option value="3">Successfully implemented</option>
+                <option value="2">Partly implemented</option>
+                <option value="1">Planned to implement</option>
+                <option value="0">Not yet implemented or planned</option>
+                <option value="na">Not applicable</option>
+            </select>
+        </div>
+        <div class="recommendation" id="recommendation3">
+            Make sure you have a lawful basis for all the data you collect, store and process!
+        </div>
+    </div>
+    <button class="accordion">More Information</button>
+    <div class="panel">
+        <p class="text-padding">
+        <ul class="specification-list-level-one">
+            <li>The GDPR principles shall ensure that personal data is processed lawfully, fairly and transparently.
+            </li>
+            <ul class="specification-list-level-two">
+                <li>You may only collect, store and process data if you have a lawful basis to do that!</li>
+            </ul>
+            <br><br>
+            <li>GDPR defines the following six lawful bases:</li>
+            <ul class="specification-list-level-two">
+                <li><b>Consent</b> - you have the explicit consent of a natural person.</li>
+                <li><b>Performance of a Contract</b> - you need to process someone's personal data to satisfy a contract
+                    to which the data subject is a party.
+                </li>
+                <li><b>Legitimate Interest</b> - you have a legitimate interest for processing someone's personal data.
+                    However, "fundamental rights and freedoms of the data subject" overrides your interests, especially
+                    if it's a child's data!
+                </li>
+                <li><b>Vital Interest</b> - you need to process someone's personal data to save somebody's life.</li>
+                <li><b>Legal Requirement</b> - you need to process someone's personal data to comply with a legal
+                    obligation.
+                </li>
+                <li><b>Public Interest</b> - you need to process someone's personal data to perform a task in the public
+                    interest.
+                </li>
+            </ul>
+            <br><br>
+            <li>Choosing an appropriate lawful basis is of utmost importance!</li>
+            <ul class="specification-list-level-two">
+                <li>An inappropriate basis could result in an unlawful processing,
+                    noncompliant response to data subjects rights, and inadequate organisational and technical data
+                    processing controls.
+                </li>
+                <li>If a lawful basis is chosen, it cannot be changed afterwards. However, it is allowed to have
+                    multiple lawful bases.
+                </li>
+                <li>You can read more about that
+                    <a href="https://kirkpatrickprice.com/video/gdpr-fundamentals-legal-basis-for-processing/#:~:text=Video%20Transcript-,GDPR%20requires%20any%20organization%20processing%20personal%20data%20to%20have%20a,requirement%2C%20and%20a%20public%20interest."
+                       target="_blank">here</a>,
+                    <a href="https://gdpr.eu/gdpr-consent-requirements/" target="_blank">here</a>
+                    and in <a href="https://gdpr-info.eu/chapter-6/" target="_blank">Chapter 6</a> of the GDPR
+                    guidelines.
+                </li>
+            </ul>
+        </ul>
+        <br><br>
+        You can also check the video below for further information.
+        <br><br>
+        </p>
+        <iframe class="embedded-video" src="https://www.youtube.com/embed/9MqKELY45HA"></iframe>
+    </div>
+    <hr class="horizontal-separator">
+    <h3>1.3 Consent</h3>
+    <!----------------------------->
+    <!-- QUESTION 4              -->
+    <!----------------------------->
+    <p class="text-padding">Do you have reviewed how you ask for and record consent?</p>
+    <div class="column">
+        <div class="input-row">
+            <label for="evaluation4">Choose:</label>
+            <select class="form-control" id="evaluation4" name="question" onchange="showRecommendation('4')">
+                <option value="3">Successfully implemented</option>
+                <option value="2">Partly implemented</option>
+                <option value="1">Planned to implement</option>
+                <option value="0">Not yet implemented or planned</option>
+                <option value="na">Not applicable</option>
+            </select>
+        </div>
+        <div class="recommendation" id="recommendation4">
+            Make sure you record consents for data processing and the demands for it properly!
+        </div>
+    </div>
+    <button class="accordion">More Information</button>
+    <div class="panel">
+        <p class="text-padding">
+        <ul class="specification-list-level-one">
+            <li>GDPR sets a high standard for consent. However, often consent is not necessary and another lawful basis
+                is more appropriate.
+            </li>
+            <br><br>
+            <li>Consent means offering people genuine choice and control over how their data is used.</li>
+            <br><br>
+            <li>If you use consent as the lawful basis, regard the following:</li>
+            <ul class="specification-list-level-two">
+                <li>Keep consent requests prominent and separate from other terms and conditions.</li>
+                <li>Avoid making consent a condition for service.</li>
+                <li>Name your organisation and any third party organisations who rely on this consent.</li>
+                <li>Keep records of what a natural person has consented to, including what you told them,
+                    and when and how they consented.
+                </li>
+                <li>Tell them they can withdraw consent at any time and how to do this.</li>
+                <li>etc.</li>
+            </ul>
+            <br><br>
+            <li>More information about the meaning of consent according to GDPR can be found
+                <a href="https://gdpr-info.eu/issues/consent/" target="_blank">here</a> and
+                <a href="https://gdpr.eu/gdpr-consent-requirements/" target="_blank">here</a>.
+                More detailed information about how to obtain, record and manage consent can be found
+                <a href="https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/consent/how-should-we-obtain-record-and-manage-consent/"
+                   target="_blank">here</a>.
+            </li>
+        </ul>
+        <br><br>
+        You can also check the video below for a short introduction to the meaning of consent according to GDPR.
+        <br><br>
+        </p>
+        <iframe class="embedded-video" src="https://www.youtube.com/embed/o3aYgr_mjKg"></iframe>
+    </div>
+    <hr class="horizontal-separator">
+    <!----------------------------->
+    <!-- QUESTION 5              -->
+    <!----------------------------->
+    <p class="text-padding">Do you have systems to record and manage ongoing consent?</p>
+    <div class="column">
+        <div class="input-row">
+            <label for="evaluation5">Choose:</label>
+            <select class="form-control" id="evaluation5" name="question" onchange="showRecommendation('5')">
+                <option value="3">Successfully implemented</option>
+                <option value="2">Partly implemented</option>
+                <option value="1">Planned to implement</option>
+                <option value="0">Not yet implemented or planned</option>
+                <option value="na">Not applicable</option>
+            </select>
+        </div>
+        <div class="recommendation" id="recommendation5">
+            Make sure you manage ongoing consent properly!
+        </div>
+    </div>
+    <button class="accordion">More Information</button>
+    <div class="panel">
+        <p class="text-padding">
+        <ul class="specification-list-level-one">
+            <li>The obligations of your business don't end with receiving consent! Reviewing consent is part of an
+                ongoing relationship with individuals and not a one-off compliance box to tick and file away.
+            </li>
+            <br><br>
+            <li>Consent must be kept under review and needs to be refreshed if anything changes. It is necessary
+                to capture these reviews and record any changes.
+            </li>
+            <ul class="specification-list-level-two">
+                <li>Use e.g. a privacy dashboard which allows people to access and update their consent settings.</li>
+                <li>It is recommended to refresh consent automatically at appropriate intervals. The length of this
+                    interval is depending on the context but refreshing once every two years is an appropriate starting
+                    point.
+                </li>
+            </ul>
+            <br><br>
+            <li>For the case your current consent is not compliant with GDPR standards or poorly documented,
+                seek new GDPR-compliant consent. Otherwise, identify a different lawful basis or stop data processing.
+            </li>
+            <br><br>
+            <li>More information about how to obtain, record and manage consent can be found
+                <a href="https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/consent/how-should-we-obtain-record-and-manage-consent/"
+                   target="_blank">here</a></li>
+        </ul>
+        <br><br>
+        </p>
+    </div>
+    <hr class="horizontal-separator">
+    <!----------------------------->
+    <!-- SCORE BOX               -->
+    <!----------------------------->
+    <div class="score-box" id="score-box">
+        <div class="row">
+            <img alt="Result" class="gold-medal" id="gold-medal" src="../resources/images/goldmedal.png">
+            <img alt="Result" class="silver-medal" id="silver-medal" src="../resources/images/silvermedal.png">
+            <img alt="Result" class="bronze-medal" id="bronze-medal" src="../resources/images/bronzemedal.png">
+            <img alt="Result" class="warning-sign" id="warning-sign" src="../resources/images/warning.png">
+            <p class="gold-text" id="gold-text">This is an example text for a resulting value greater than 90.
+                The example test is rewarded with a gold medal. Maybe some more blabla for the user.</p>
+            <p class="silver-text" id="silver-text">This is an example text for a resulting value between 70 and
+                90. The example test is rewarded with a silver medal. Maybe some more blabla for the user.</p>
+            <p class="bronze-text" id="bronze-text">This is an example text for a resulting value between 50 and
+                70. The example test is rewarded with a bronze medal. Maybe some more blabla for the user.</p>
+            <p class="warning-text" id="warning-text">This is an example text for a resulting value of less than
+                50. The user is made aware of this with a warning. Maybe some more blabla for the user.</p>
+        </div>
+    </div>
+    <button class="interaction-button" id="submit-button" onclick="countPoints('controllersChecklist')">Submit</button>
+    <button id="myTopBtn" onclick="topFunction()" title="Go to top">Top</button>
+</div>
+</body>
 </html>
 
 <!----------------------------------------------------------------------->

@@ -1,79 +1,176 @@
-var evaluatedSum;
-var maxPoints;
-var score;
-var numberOfQuestions;
+// definition of variables
+let evaluatedSum;
+let maxPoints;
+let score;
+let numberOfQuestions;
+// accordion for "More Information"
+let acc = document.getElementsByClassName("accordion");
+// scroll to top button
+toTopbutton = document.getElementById("myTopBtn");
 
-function countPoints() {
-
+// function to calculate score of each test
+function countPoints(checklist) {
     evaluatedSum = 0;
     maxPoints = 0;
+    // get number of questions
     numberOfQuestions = document.getElementsByName("question").length;
-
-    for (var i = 0; i < numberOfQuestions; i++) {
-        var selObj = document.getElementById("evaluation" + (i+1));
-        var selValue = parseInt(selObj.options[selObj.selectedIndex].value, 10);
+    // loop through all questions to calculate max score and achieved score
+    for (let i = 0; i < numberOfQuestions; i++) {
+        let selObj = document.getElementById("evaluation" + (i + 1));
+        let selValue = parseInt(selObj.options[selObj.selectedIndex].value, 10);
+        // check if there are any questions which are not applicable to reduce the max score
         if (!(selObj.options[selObj.selectedIndex].text.localeCompare("Not applicable") === 0)) {
             maxPoints = maxPoints + 3;
             evaluatedSum = evaluatedSum + selValue;
         }
     }
-
+    // assign the corresponding score box to the achieved score by calling the showScoreBox function
     score = (evaluatedSum / maxPoints) * 100;
+    evaluateScoreBox(score, "gold-medal", "gold-text", "silver-medal",
+        "silver-text", "bronze-medal", "bronze-text", "warning-sign",
+        "warning-text", "score-box");
+    // save actual score to local storage (key:value pair)
+    sessionStorage.setItem(checklist, score);
+}
 
+// update overview / result window on load by calling update function
+if (window.location.href.match('overview-results.html') != null) {
+    updateOverviewResult()
+}
+
+// function to update overview / result window
+function updateOverviewResult() {
+    if ("controllersChecklist" in sessionStorage) {
+        evaluateScoreBox(parseInt(sessionStorage.getItem("controllersChecklist")),
+            "gold-medal-controllers-checklist", "gold-text-controllers-checklist",
+            "silver-medal-controllers-checklist", "silver-text-controllers-checklist",
+            "bronze-medal-controllers-checklist", "bronze-text-controllers-checklist",
+            "warning-sign-controllers-checklist", "warning-text-controllers-checklist",
+            "score-box-controllers-checklist");
+    } else {
+        document.getElementById("no-controllers-checklist").style.display = "block";
+    }
+
+    if ("processorsChecklist" in sessionStorage) {
+        evaluateScoreBox(parseInt(sessionStorage.getItem("processorsChecklist")),
+            "gold-medal-processors-checklist", "gold-text-processors-checklist",
+            "silver-medal-processors-checklist", "silver-text-processors-checklist",
+            "bronze-medal-processors-checklist", "bronze-text-processors-checklist",
+            "warning-sign-processors-checklist", "warning-text-processors-checklist",
+            "score-box-processors-checklist");
+    } else {
+        document.getElementById("no-processors-checklist").style.display = "block";
+    }
+
+    if ("informationChecklist" in sessionStorage) {
+        evaluateScoreBox(parseInt(sessionStorage.getItem("informationChecklist")),
+            "gold-medal-information-checklist", "gold-text-information-checklist",
+            "silver-medal-information-checklist", "silver-text-information-checklist",
+            "bronze-medal-information-checklist", "bronze-text-information-checklist",
+            "warning-sign-information-checklist", "warning-text-information-checklist",
+            "score-box-information-checklist");
+    } else {
+        document.getElementById("no-information-checklist").style.display = "block";
+    }
+
+    if ("dataChecklist" in sessionStorage) {
+        evaluateScoreBox(parseInt(sessionStorage.getItem("dataChecklist")),
+            "gold-medal-data-checklist", "gold-text-data-checklist",
+            "silver-medal-data-checklist", "silver-text-data-checklist",
+            "bronze-medal-data-checklist", "bronze-text-data-checklist",
+            "warning-sign-data-checklist", "warning-text-data-checklist",
+            "score-box-data-checklist");
+    } else {
+        document.getElementById("no-data-checklist").style.display = "block";
+    }
+
+    if ("recordChecklist" in sessionStorage) {
+        evaluateScoreBox(parseInt(sessionStorage.getItem("recordChecklist")),
+            "gold-medal-record-checklist", "gold-text-record-checklist",
+            "silver-medal-record-checklist", "silver-text-record-checklist",
+            "bronze-medal-record-checklist", "bronze-text-record-checklist",
+            "warning-sign-record-checklist", "warning-text-record-checklist",
+            "score-box-record-checklist");
+    } else {
+        document.getElementById("no-record-checklist").style.display = "block";
+    }
+
+    if ("consentChecklist" in sessionStorage) {
+        evaluateScoreBox(parseInt(sessionStorage.getItem("consentChecklist")),
+            "gold-medal-consent-checklist", "gold-text-consent-checklist",
+            "silver-medal-consent-checklist", "silver-text-consent-checklist",
+            "bronze-medal-consent-checklist", "bronze-text-consent-checklist",
+            "warning-sign-consent-checklist", "warning-text-consent-checklist",
+            "score-box-consent-checklist");
+    } else {
+        document.getElementById("no-consent-checklist").style.display = "block";
+    }
+}
+
+// function to determine the corresponding score box
+function evaluateScoreBox(score, goldMedalId, goldTextId, silverMedalId, silverTextId, bronzeMedalId, bronzeTextId,
+                          warningSignId, warningTextId, scoreBoxId) {
     if (score >= 90) {
-        showScoreBox("block", "block", "none", "none", "none",
-            "none", "none", "none", "lightgoldenrodyellow")
-    }
-    else if ((score < 90) && (score >= 70)) {
-        showScoreBox("none", "none", "block", "block", "none",
-            "none", "none", "none", "lightblue")
-    }
-    else if ((score < 70) && (score >= 50)) {
-        showScoreBox("none", "none", "none", "none", "block",
-            "block", "none", "none", "lightsalmon")
-    }
-    else {
-        showScoreBox("none", "none", "none", "none", "none",
-            "none", "block", "block", "lightcoral")
+        showScoreBox(goldMedalId, "block", goldTextId, "block", silverMedalId,
+            "none", silverTextId, "none", bronzeMedalId, "none",
+            bronzeTextId, "none", warningSignId, "none", warningTextId,
+            "none", scoreBoxId, "block", "lightgoldenrodyellow")
+    } else if ((score < 90) && (score >= 70)) {
+        showScoreBox(goldMedalId, "none", goldTextId, "none", silverMedalId,
+            "block", silverTextId, "block", bronzeMedalId, "none",
+            bronzeTextId, "none", warningSignId, "none", warningTextId,
+            "none", scoreBoxId, "block", "lightblue")
+    } else if ((score < 70) && (score >= 50)) {
+        showScoreBox(goldMedalId, "none", goldTextId, "none", silverMedalId,
+            "none", silverTextId, "none", bronzeMedalId, "block",
+            bronzeTextId, "block", warningSignId, "none", warningTextId,
+            "none", scoreBoxId, "block", "lightsalmon")
+    } else {
+        showScoreBox(goldMedalId, "none", goldTextId, "none", silverMedalId,
+            "none", silverTextId, "none", bronzeMedalId, "none",
+            bronzeTextId, "none", warningSignId, "block", warningTextId,
+            "block", scoreBoxId, "block", "lightcoral")
     }
 }
 
-function showScoreBox(goldMedal, goldText, silverMedal, silverText, bronzeMedal, bronzeText, warningSign,
-                               warningText, backgroundColor) {
-    document.getElementById("gold-medal").style.display = goldMedal;
-    document.getElementById("gold-text").style.display = goldText;
-    document.getElementById("silver-medal").style.display = silverMedal;
-    document.getElementById("silver-text").style.display = silverText;
-    document.getElementById("bronze-medal").style.display = bronzeMedal;
-    document.getElementById("bronze-text").style.display = bronzeText;
-    document.getElementById("warning").style.display = warningSign;
-    document.getElementById("warning-text").style.display = warningText;
-    document.getElementById("score-box").style.backgroundColor = backgroundColor;
-    document.getElementById("score-box").style.display = "block";
+// function to show the score box
+function showScoreBox(goldMedalId, goldMedalProperty, goldTextId, goldTextProperty, silverMedalId, silverMedalProperty,
+                      silverTextId, silverTextProperty, bronzeMedalId, bronzeMedalProperty, bronzeTextId,
+                      bronzeTextProperty, warningSignId, warningSignProperty, warningTextId, warningTextProperty,
+                      scoreBoxId, scoreBoxProperty, backgroundColor) {
+    document.getElementById(goldMedalId).style.display = goldMedalProperty;
+    document.getElementById(goldTextId).style.display = goldTextProperty;
+    document.getElementById(silverMedalId).style.display = silverMedalProperty;
+    document.getElementById(silverTextId).style.display = silverTextProperty;
+    document.getElementById(bronzeMedalId).style.display = bronzeMedalProperty;
+    document.getElementById(bronzeTextId).style.display = bronzeTextProperty;
+    document.getElementById(warningSignId).style.display = warningSignProperty;
+    document.getElementById(warningTextId).style.display = warningTextProperty;
+    document.getElementById(scoreBoxId).style.backgroundColor = backgroundColor;
+    document.getElementById(scoreBoxId).style.display = scoreBoxProperty;
 }
 
+// function to show a recommendation box for the user if an important question is not considered by the user
 function showRecommendation(elementIndex) {
-    var selObj = document.getElementById("evaluation"+elementIndex);
-    var recommendationDisplayProperty = document.getElementById("recommendation"+elementIndex);
-
-    if ((selObj.options[selObj.selectedIndex].text.localeCompare("Not yet implemented or planned") === 0)){
+    let selObj = document.getElementById("evaluation" + elementIndex);
+    let recommendationDisplayProperty = document.getElementById("recommendation" + elementIndex);
+    // check the selected answer to show recommendation if necessary
+    if ((selObj.options[selObj.selectedIndex].text.localeCompare("Not yet implemented or planned") === 0)) {
         recommendationDisplayProperty.style.display = "block";
-    } else
-    {
+    } else {
         recommendationDisplayProperty.style.display = "none";
     }
 }
 
-var acc = document.getElementsByClassName("accordion");
-
-for (var i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
+// "More Information" accordion
+for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
         /* Toggle between adding and removing the "active" class,
         to highlight the button that controls the panel */
         this.classList.toggle("active");
 
         /* Toggle between hiding and showing the active panel */
-        var panel = this.nextElementSibling;
+        let panel = this.nextElementSibling;
         if (panel.style.display === "block") {
             panel.style.display = "none";
         } else {
@@ -82,17 +179,17 @@ for (var i = 0; i < acc.length; i++) {
     });
 }
 
-//Get the button:
-mybutton = document.getElementById("myTopBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+// when the user scrolls down 20px from the top of the document, show the to top button
+window.onscroll = function () {
+    scrollFunction()
+};
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
+        toTopbutton.style.display = "block";
     } else {
-        mybutton.style.display = "none";
+        toTopbutton.style.display = "none";
     }
 }
 
