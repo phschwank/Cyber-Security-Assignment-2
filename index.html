@@ -17,6 +17,8 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
+                <a href="templates/overview-assessments.html">Overview Checklists</a>
+                <a href="templates/pre-checklist.html">Pre-Checklists</a>
                 <a href="templates/controllers-checklist.html">Controllers Checklist</a>
                 <a href="templates/processors-checklist.html">Processors Checklist</a>
                 <a href="templates/information-security.html">Information Security</a>
@@ -45,35 +47,82 @@
         feedback is available for you to suggest practical actions you can take to improve your data protection
         compliance.
     </p>
-    <hr class="horizontal-separator">
-    <h2>Controllers and Processors Checklist</h2>
-    <p class="text-padding">First of all you should determine whether your organisation has the role of a data controller,
-      a data processor or both. This clarification is important because the scope of requirements to achieve GDPR
-      compliance is different for the two roles.
-      <h3>Data Controllers Role</h3>
-      The data controller is the person or organisation who determines the purpose, procedure and scope of data usage and processing.
-      Data controllers hold the responsibility for protecting the privacy and rights of a data subject. This means that the data controller
-      holds the control over the data. The data controller is also responsible for obtaining and managing tasks like obtaining the consent
-      for data processing.
-      <br><br>
-      <a href="templates/controllers-checklist.html" class="button">Controllers Checklist</a>
-      <h3>Data Processors Role</h3>
-      The data processor processes data on behalf of the data controller. A data processor does neither own nor control the data processed.
-      This means that the data processor is not able to change the purpose and means in which the data is used. The are bound to the instructions
-      given by the data controller. In this context, data processing includes also trivial tasks such as data storing on a third party's servers.
-      <br><br>
-      <a href="templates/processors-checklist.html" class="button">Processors Checklist</a>
-      <h3>Still unsure about your role?</h3>
-      The tasks, responsibilities and many other topics regarding data controller and data processor are described in more detail in
-      <a href="https://gdpr-info.eu/chapter-4/" target="_blank">Chapter 4</a> of GDPR. A good staring point are
-      <a href="https://gdpr-info.eu/art-24-gdpr/" target="_blank">Article 24</a> and
-      <a href="https://gdpr-info.eu/art-28-gdpr/" target="_blank">Article 28</a>.
-      However, more condensed information and many hints and advices from the industry can be found
-      <a href="https://www.osborneclarke.com/insights/am-i-a-data-controller-or-a-data-processor-and-why-is-it-important-anyway/#:~:text=The%20data%20controller%20is%20the,the%20data%20controller%27s%20own%20employees)." target="_blank">here</a>,
-      <a href="https://digitalguardian.com/blog/data-controller-vs-data-processor-whats-difference" target="_blank">here</a> and
-      <a href="https://www.termsfeed.com/blog/gdpr-data-controller-vs-processor/" target="_blank">here</a>.
-    </p>
-    <hr class="horizontal-separator">
+    <button class="accordion">Is GDPR relevant to my company?</button>
+    <div class="panel">
+
+        <p class="text-padding">Have you reviewed your organisation’s mechanisms for collecting consent?</p>
+        <div class="column">
+            <div class="input-row">
+                <label for="evaluation1">Choose:</label>
+                <select class="form-control" id="evaluation1" name="question" onchange="showRecommendation('1')">
+                    <option value="3">Successfully implemented</option>
+                    <option value="2">Partly implemented</option>
+                    <option value="1">Planned to implement</option>
+                    <option value="0">Not yet implemented or planned</option>
+                    <option value="na">Not applicable</option>
+                </select>
+            </div>
+            <div class="recommendation" id="recommendation1">
+                You need to review existing consents and your consent mechanisms to check they meet the UK GDPR standard.
+                If they do, there is no need to obtain fresh consent.
+            </div>
+        </div>
+
+        <p class="text-padding">Have you reviewed your organisation’s mechanisms for collecting consent?</p>
+        <div class="column">
+            <div class="input-row">
+                <label for="evaluation2">Choose:</label>
+                <select class="form-control" id="evaluation2" name="question" onchange="showRecommendation('2')">
+                    <option value="3">Successfully implemented</option>
+                    <option value="2">Partly implemented</option>
+                    <option value="1">Planned to implement</option>
+                    <option value="0">Not yet implemented or planned</option>
+                    <option value="na">Not applicable</option>
+                </select>
+            </div>
+            <div class="recommendation" id="recommendation2">
+                You need to review existing consents and your consent mechanisms to check they meet the UK GDPR standard.
+                If they do, there is no need to obtain fresh consent.
+            </div>
+        </div>
+
+        <p class="text-padding">Have you reviewed your organisation’s mechanisms for collecting consent?</p>
+        <div class="column">
+            <div class="input-row">
+                <label for="evaluation3">Choose:</label>
+                <select class="form-control" id="evaluation3" name="question" onchange="showRecommendation('3')">
+                    <option value="3">Successfully implemented</option>
+                    <option value="2">Partly implemented</option>
+                    <option value="1">Planned to implement</option>
+                    <option value="0">Not yet implemented or planned</option>
+                    <option value="na">Not applicable</option>
+                </select>
+            </div>
+            <div class="recommendation" id="recommendation3">
+                You need to review existing consents and your consent mechanisms to check they meet the UK GDPR standard.
+                If they do, there is no need to obtain fresh consent.
+            </div>
+        </div>
+
+        <p class="text-padding">Have you reviewed your organisation’s mechanisms for collecting consent?</p>
+        <div class="column">
+            <div class="input-row">
+                <label for="evaluation4">Choose:</label>
+                <select class="form-control" id="evaluation4" name="question" onchange="showRecommendation('4')">
+                    <option value="3">Successfully implemented</option>
+                    <option value="2">Partly implemented</option>
+                    <option value="1">Planned to implement</option>
+                    <option value="0">Not yet implemented or planned</option>
+                    <option value="na">Not applicable</option>
+                </select>
+            </div>
+            <div class="recommendation" id="recommendation4">
+                You need to review existing consents and your consent mechanisms to check they meet the UK GDPR standard.
+                If they do, there is no need to obtain fresh consent.
+            </div>
+        </div>
+
+    </div>
 </div>
 </body>
 </html>
