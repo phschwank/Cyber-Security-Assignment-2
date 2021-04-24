@@ -198,3 +198,16 @@ function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+
+// function to show a recommendation box for the user if GDPR is relevant for them
+function showRecommendationGDPR(elementIndex) {
+    let selObj = document.getElementById("evaluation" + elementIndex);
+    let recommendationDisplayProperty = document.getElementById("recommendation" + elementIndex);
+    // check the selected answer to show recommendation if necessary
+    if ((selObj.options[selObj.selectedIndex].text.localeCompare("Yes") === 0)) {
+        recommendationDisplayProperty.style.display = "block";
+    } else {
+        recommendationDisplayProperty.style.display = "none";
+    }
+}

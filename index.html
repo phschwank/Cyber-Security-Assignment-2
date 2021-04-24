@@ -49,78 +49,126 @@
     </p>
     <button class="accordion">Is GDPR relevant to my company?</button>
     <div class="panel">
-
-        <p class="text-padding">Have you reviewed your organisation’s mechanisms for collecting consent?</p>
+        <br><br>
+        <p class="text-padding">Is the headquarter or a branch of your organisation located in the European Union or the European Economic Area?</p>
         <div class="column">
             <div class="input-row">
                 <label for="evaluation1">Choose:</label>
-                <select class="form-control" id="evaluation1" name="question" onchange="showRecommendation('1')">
-                    <option value="3">Successfully implemented</option>
-                    <option value="2">Partly implemented</option>
-                    <option value="1">Planned to implement</option>
-                    <option value="0">Not yet implemented or planned</option>
-                    <option value="na">Not applicable</option>
+                <select class="form-control" id="evaluation1" name="question" onchange="showRecommendationGDPR('1')">
+                    <option value="2"></option>
+                    <option value="1">No</option>
+                    <option value="0">Yes</option>
                 </select>
             </div>
             <div class="recommendation" id="recommendation1">
-                You need to review existing consents and your consent mechanisms to check they meet the UK GDPR standard.
-                If they do, there is no need to obtain fresh consent.
+                Based on your answer we assume that GDPR is applicable to your company. Please consider, that GDPR is not necessarily applicable
+                to your organisation in Switzerland. This is depending on the activities of your organisation. However, GDPR is under all circumstances
+                applicable to your branches outside of Switzerland
             </div>
         </div>
 
-        <p class="text-padding">Have you reviewed your organisation’s mechanisms for collecting consent?</p>
+        <button class="accordion">More Information about branches in the European Economic Area</button>
+        <div class="panel">
+          <p class="text-padding">
+            <ul class="specification-list-level-one">
+              <li>There is no applicability of GDPR from the mere retrievability of a swiss website in the EEA.</li>
+              <br><br>
+              <li>Swiss companies that act as data processors for customers covered by GDPR may also be partially covered by GDPR.</li>
+              <br><br>
+              <li>The mere presence of an employee in the EEA is not sufficient to trigger the application of GDPR.
+                  However, this can be the case if the data processing is carried out in the context of the activities of the EEA-based employee.</li>
+              <br><br>
+            </ul>
+          </p>
+        </div>
+
+        <br><br>
+        <p class="text-padding">Are your offers (including free offers) explicitly directed at persons in the European Union or the European Economic Area?</p>
         <div class="column">
             <div class="input-row">
                 <label for="evaluation2">Choose:</label>
-                <select class="form-control" id="evaluation2" name="question" onchange="showRecommendation('2')">
-                    <option value="3">Successfully implemented</option>
-                    <option value="2">Partly implemented</option>
-                    <option value="1">Planned to implement</option>
-                    <option value="0">Not yet implemented or planned</option>
-                    <option value="na">Not applicable</option>
+                <select class="form-control" id="evaluation2" name="question" onchange="showRecommendationGDPR('2')">
+                    <option value="2"></option>
+                    <option value="1">No</option>
+                    <option value="0">Yes</option>
                 </select>
             </div>
             <div class="recommendation" id="recommendation2">
-                You need to review existing consents and your consent mechanisms to check they meet the UK GDPR standard.
-                If they do, there is no need to obtain fresh consent.
+                Based on your answer we assume that GDPR is applicable to your company.
             </div>
         </div>
 
-        <p class="text-padding">Have you reviewed your organisation’s mechanisms for collecting consent?</p>
+        <button class="accordion">More Information about intended offers in the European Economic Area</button>
+        <div class="panel">
+          <p class="text-padding">
+            The following activities can indicate an intended offer which would lead to the applicability of GDPR:
+            <br><br>
+            <ul class="specification-list-level-one">
+              <li>The mention of the EU or at least one EEA member state in connection with services or goods offered.</li>
+              <br><br>
+              <li>The delivery or shipment of goods to persons in the EEA.</li>
+              <br><br>
+              <li>The advertising directed at an audience in the EEA, for example, relevant search engine advertising.</li>
+              <br><br>
+              <li>The publication of contact addresses and telephone numbers or directions for persons in the EEA.</li>
+              <br><br>
+              <li>The use of top level domains related to the EU (.eu) or at least one EEA member state (for example .at, .de or .li).</li>
+              <br><br>
+              <li>The use of a language or currency used in at least one EEA member state.</li>
+              <br><br>
+              <li>Activities with an international character, for example certain tourist activities.</li>
+              <br><br>
+              <li>The mention of an international customer base residing in different EEA member states.</li>
+              <br><br>
+            </ul>
+          </p>
+        </div>
+
+        <br><br>
+        <p class="text-padding">Do you monitor the behavior of people in the European Union or the European Economic Area,
+          for example, by tracking the activities of app users or website visitors?</p>
         <div class="column">
             <div class="input-row">
                 <label for="evaluation3">Choose:</label>
-                <select class="form-control" id="evaluation3" name="question" onchange="showRecommendation('3')">
-                    <option value="3">Successfully implemented</option>
-                    <option value="2">Partly implemented</option>
-                    <option value="1">Planned to implement</option>
-                    <option value="0">Not yet implemented or planned</option>
-                    <option value="na">Not applicable</option>
+                <select class="form-control" id="evaluation3" name="question" onchange="showRecommendationGDPR('3')">
+                    <option value="2"></option>
+                    <option value="1">No</option>
+                    <option value="0">Yes</option>
                 </select>
             </div>
             <div class="recommendation" id="recommendation3">
-                You need to review existing consents and your consent mechanisms to check they meet the UK GDPR standard.
-                If they do, there is no need to obtain fresh consent.
+                Based on your answer we assume that GDPR is applicable to your company. However, the final answer is strongly depending
+                on your purpose of processing.
             </div>
         </div>
 
-        <p class="text-padding">Have you reviewed your organisation’s mechanisms for collecting consent?</p>
-        <div class="column">
-            <div class="input-row">
-                <label for="evaluation4">Choose:</label>
-                <select class="form-control" id="evaluation4" name="question" onchange="showRecommendation('4')">
-                    <option value="3">Successfully implemented</option>
-                    <option value="2">Partly implemented</option>
-                    <option value="1">Planned to implement</option>
-                    <option value="0">Not yet implemented or planned</option>
-                    <option value="na">Not applicable</option>
-                </select>
-            </div>
-            <div class="recommendation" id="recommendation4">
-                You need to review existing consents and your consent mechanisms to check they meet the UK GDPR standard.
-                If they do, there is no need to obtain fresh consent.
-            </div>
+        <button class="accordion">More Information about the monitoring of people in the European Economic Area</button>
+        <div class="panel">
+          <p class="text-padding">
+            The following activities can indicate a monitoring of people that would lead to the applicability of GDPR:
+            <br><br>
+            <ul class="specification-list-level-one">
+              <li>The use of personalized or behavioral advertising.</li>
+              <br><br>
+              <li>The use of Geo-localization, especially for marketing purposes.</li>
+              <br><br>
+              <li>The tracking with cookies or fingerprinting.</li>
+              <br><br>
+              <li>The performance of a personalized analysis of eating habits and health data.</li>
+              <br><br>
+              <li>The performance of personalized studies and surveys for market research.</li>
+              <br><br>
+              <li>The use of video surveillance.</li>
+              <br><br>
+            </ul>
+          </p>
         </div>
+        <br><br>
+
+        <p class="text-padding">Please check this
+          <a href="https://steigerlegal.ch/2019/11/17/dsgvo-gdpr-leitlinien-schweiz-dsgvo-3/" target="_blank">weblink</a>
+          for more detailed information and the description of some specific use cases.</p>
+        <br><br>
 
     </div>
 </div>
