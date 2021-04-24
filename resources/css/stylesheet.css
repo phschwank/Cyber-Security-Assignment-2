@@ -146,16 +146,42 @@ h3 {
     text-align: right;
 }
 
-.interaction-button {
+/*.checklist-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}*/
+
+.checklist-button {
+    border-color: transparent;
     font-size: 16px;
     padding: 2px 5px;
-    border: 1px solid #557A95;
-    border-radius: 4px;
     box-sizing: border-box;
-    background-color: #efecea;
-    color: #557A95;
+    background: #82c785;
+    color: #414043;
     text-decoration: none;
-    cursor: grab;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 25px;
+    text-align: center;
+}
+
+.interaction-button {
+    border-color: transparent;
+    font-size: 16px;
+    padding: 2px 5px;
+    box-sizing: border-box;
+    background: #7395AE;
+    color: #414043;
+    text-decoration: none;
+    cursor: pointer;
     display: inline-block;
     line-height: 25px;
     text-align: center;
@@ -166,11 +192,14 @@ h3 {
     padding: 3px 3px 3px 6px;
 }
 
+.checklist-button:hover {
+    background: #4CAF50;
+    color: #414043;
+}
+
 .interaction-button:hover {
-    border-width: 2px;
-    border-color: #7395AE;
-    color: #7395AE;
-    padding: 1px 4px;
+    background: #446277;
+    color: #414043;
 }
 
 ul.detail-list {
@@ -411,6 +440,12 @@ tbody {
         margin: 5px 0;
     }
 
+    .checklist-button {
+        width: 100%;
+        display: block;
+        margin: 5px 0;
+    }
+
     table, thead, tbody, th, td, tr {
         display: block;
     }
@@ -505,17 +540,4 @@ tbody {
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
-
-.button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
 }
