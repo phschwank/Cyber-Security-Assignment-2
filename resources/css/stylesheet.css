@@ -379,6 +379,44 @@ tbody {
     content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
+/* Style the buttons that are used to open and close the accordionAccordion panel */
+.accordionAccordion {
+    background-color: #efecea;
+    color: #444444;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.activeAccordion, .accordionAccordion:hover {
+    background-color: #8f8e8c;
+}
+
+/* Style the accordionAccordion panel. Note: hidden by default */
+.panelAccordion {
+    padding: 0 18px;
+    background-color: #efecea;
+    display: none;
+}
+
+.accordionAccordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #8f8e8c;
+    float: right;
+    margin-left: 5px;
+}
+
+.activeAccordion:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
 #myTopBtn {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
@@ -391,7 +429,6 @@ tbody {
     color: white; /* Text color */
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
     font-size: 18px; /* Increase font size */
 }
 

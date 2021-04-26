@@ -47,15 +47,16 @@
         feedback is available for you to suggest practical actions you can take to improve your data protection
         compliance.
     </p>
+    <br>
     <button class="accordion">Is GDPR relevant to my company?</button>
     <div class="panel">
-        <br><br>
+        <br>
         <p class="text-padding">Is the headquarter or a branch of your organisation located in the European Union or the European Economic Area?</p>
         <div class="column">
             <div class="input-row">
                 <label for="evaluation1">Choose:</label>
                 <select class="form-control" id="evaluation1" name="question" onchange="showRecommendationGDPR('1')">
-                    <option value="2"></option>
+                    <option value="" disabled selected>Select your option</option>
                     <option value="1">No</option>
                     <option value="0">Yes</option>
                 </select>
@@ -67,8 +68,8 @@
             </div>
         </div>
 
-        <button class="accordion">More Information about branches in the European Economic Area</button>
-        <div class="panel">
+        <button class="accordionAccordion">More Information about branches in the European Economic Area</button>
+        <div class="panelAccordion">
           <p class="text-padding">
             <ul class="specification-list-level-one">
               <li>There is no applicability of GDPR from the mere retrievability of a swiss website in the EEA.</li>
@@ -82,13 +83,13 @@
           </p>
         </div>
 
-        <br><br>
+        <hr class="horizontal-separator">
         <p class="text-padding">Are your offers (including free offers) explicitly directed at persons in the European Union or the European Economic Area?</p>
         <div class="column">
             <div class="input-row">
                 <label for="evaluation2">Choose:</label>
                 <select class="form-control" id="evaluation2" name="question" onchange="showRecommendationGDPR('2')">
-                    <option value="2"></option>
+                    <option value="" disabled selected>Select your option</option>
                     <option value="1">No</option>
                     <option value="0">Yes</option>
                 </select>
@@ -98,8 +99,8 @@
             </div>
         </div>
 
-        <button class="accordion">More Information about intended offers in the European Economic Area</button>
-        <div class="panel">
+        <button class="accordionAccordion">More Information about intended offers in the European Economic Area</button>
+        <div class="panelAccordion">
           <p class="text-padding">
             The following activities can indicate an intended offer which would lead to the applicability of GDPR:
             <br><br>
@@ -124,14 +125,14 @@
           </p>
         </div>
 
-        <br><br>
+        <hr class="horizontal-separator">
         <p class="text-padding">Do you monitor the behavior of people in the European Union or the European Economic Area,
           for example, by tracking the activities of app users or website visitors?</p>
         <div class="column">
             <div class="input-row">
                 <label for="evaluation3">Choose:</label>
                 <select class="form-control" id="evaluation3" name="question" onchange="showRecommendationGDPR('3')">
-                    <option value="2"></option>
+                    <option value="" disabled selected>Select your option</option>
                     <option value="1">No</option>
                     <option value="0">Yes</option>
                 </select>
@@ -142,8 +143,8 @@
             </div>
         </div>
 
-        <button class="accordion">More Information about the monitoring of people in the European Economic Area</button>
-        <div class="panel">
+        <button class="accordionAccordion">More Information about the monitoring of people in the European Economic Area</button>
+        <div class="panelAccordion">
           <p class="text-padding">
             The following activities can indicate a monitoring of people that would lead to the applicability of GDPR:
             <br><br>
@@ -163,12 +164,12 @@
             </ul>
           </p>
         </div>
-        <br><br>
 
+        <hr class="horizontal-separator">
         <p class="text-padding">Please check this
           <a href="https://steigerlegal.ch/2019/11/17/dsgvo-gdpr-leitlinien-schweiz-dsgvo-3/" target="_blank">weblink</a>
           for more detailed information and the description of some specific use cases.</p>
-        <br><br>
+        <br>
 
     </div>
 </div>
