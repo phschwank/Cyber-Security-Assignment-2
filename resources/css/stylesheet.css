@@ -100,14 +100,14 @@ h3 {
     display: block;
 }
 
-img {
+.img {
     width: 512px;
     height: 512px;
     cursor: zoom-in;
     text-align: center;
 }
 
-img:hover {
+.img:hover {
     color: #424242;
     -webkit-transition: all .3s ease-in;
     -moz-transition: all .3s ease-in;
@@ -578,6 +578,12 @@ tbody {
         margin-left: -80px;
     }
 
+}
+
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+    }
 }
 
 /*---------------------TEST AREA-----------------------------*/
