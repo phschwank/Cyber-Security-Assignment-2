@@ -3,11 +3,37 @@ let evaluatedSum;
 let maxPoints;
 let score;
 let numberOfQuestions;
+let relevanceScore = 0;
 // accordion for "More Information"
 let acc = document.getElementsByClassName("accordion");
 let accAcc = document.getElementsByClassName("accordionAccordion");
 // scroll to top button
 toTopbutton = document.getElementById("myTopBtn");
+
+// function to check assessment of the index page
+if (window.location.href.match('index.html') != null) {
+    setInterval(function () {
+        let nanBool = false;
+        numberOfQuestions = document.getElementsByName("question").length;
+        let furtherProcedure = document.getElementById("further-procedure");
+        evaluatedSum = 0;
+        for (let i = 0; i < numberOfQuestions; i++) {
+            let selObj = document.getElementById("evaluation" + (i + 1));
+            let selValue = parseInt(selObj.options[selObj.selectedIndex].value, 10);
+            if (Number.isNaN(selValue)) {
+                nanBool = true;
+                break;
+            } else {
+                evaluatedSum = evaluatedSum + selValue;
+            }
+        }
+        if ((evaluatedSum > 0) && (nanBool === false)) {
+            furtherProcedure.style.display = "block";
+        } else {
+            furtherProcedure.style.display = "none";
+        }
+    }, 1000);
+}
 
 // function to calculate score of each test
 function countPoints(checklist) {
@@ -32,6 +58,56 @@ function countPoints(checklist) {
         "warning-text", "score-box");
     // save actual score to local storage (key:value pair)
     sessionStorage.setItem(checklist, score);
+}
+
+// function to calculate score of the Pre-Checklist
+function countPointsPreChecklist() {
+    evaluatedSum = 0;
+    // get number of questions
+    numberOfQuestions = document.getElementsByName("question").length;
+    // elements to change properties later
+    let scoreBox = document.getElementById("pre-checklist-box");
+    let greenText = document.getElementById("green-text");
+    let yellowText = document.getElementById("yellow-text");
+    let redText = document.getElementById("red-text");
+    let nanText = document.getElementById("nan-text");
+    // loop through all questions to calculate max score and achieved score
+    for (let i = 0; i < numberOfQuestions; i++) {
+        // add +3 because the first two questions are excluded and the index of the for loop starts at 0 (question 3-11)
+        let selObj = document.getElementById("evaluation" + (i + 3));
+        let selValue = parseInt(selObj.options[selObj.selectedIndex].value, 10);
+        evaluatedSum = evaluatedSum + selValue;
+    }
+    // get evaluation result
+    if (Number.isNaN(evaluatedSum)) {
+        scoreBox.style.backgroundColor = "lightcoral";
+        scoreBox.style.display = "block";
+        greenText.style.display = "none";
+        yellowText.style.display = "none";
+        redText.style.display = "none";
+        nanText.style.display = "block";
+    } else if (evaluatedSum > 6) {
+        scoreBox.style.backgroundColor = "lightgreen";
+        scoreBox.style.display = "block";
+        greenText.style.display = "block";
+        yellowText.style.display = "none";
+        redText.style.display = "none";
+        nanText.style.display = "none";
+    } else if ((evaluatedSum > 2) && (evaluatedSum < 7)) {
+        scoreBox.style.backgroundColor = "lightgoldenrodyellow";
+        scoreBox.style.display = "block";
+        greenText.style.display = "none";
+        yellowText.style.display = "block";
+        redText.style.display = "none";
+        nanText.style.display = "none";
+    } else {
+        scoreBox.style.backgroundColor = "lightcoral";
+        scoreBox.style.display = "block";
+        greenText.style.display = "none";
+        yellowText.style.display = "none";
+        redText.style.display = "block";
+        nanText.style.display = "none";
+    }
 }
 
 // update overview / result window on load by calling update function
@@ -163,6 +239,63 @@ function showRecommendation(elementIndex) {
     }
 }
 
+// function to show a recommendation box for the user if GDPR is relevant for them (index page)
+function showRecommendationGDPR(elementIndex) {
+    let selObj = document.getElementById("evaluation" + elementIndex);
+    let recommendationDisplayProperty = document.getElementById("recommendation" + elementIndex);
+    // check the selected answer to show recommendation if necessary
+    if ((selObj.options[selObj.selectedIndex].text.localeCompare("Yes") === 0)) {
+        recommendationDisplayProperty.style.display = "block";
+    } else {
+        recommendationDisplayProperty.style.display = "none";
+    }
+}
+
+function showRecommendationPreChecklist(question) {
+
+    if (question === '1') {
+
+        let recommendationDisplayPropertyYes = document.getElementById("Question1RecommendationYes");
+        let recommendationDisplayPropertyNo = document.getElementById("Question1RecommendationNo");
+
+        let selObj = document.getElementById("evaluation1");
+        let selValue = parseInt(selObj.options[selObj.selectedIndex].value, 10);
+
+        if (selValue === 1) {
+            recommendationDisplayPropertyYes.style.display = "block";
+            recommendationDisplayPropertyNo.style.display = "none";
+        } else {
+            recommendationDisplayPropertyYes.style.display = "none";
+            recommendationDisplayPropertyNo.style.display = "block";
+        }
+
+    } else {
+
+        let recommendationDisplayPropertyFirst = document.getElementById("Question2RecommendationFirst");
+        let recommendationDisplayPropertySecond = document.getElementById("Question2RecommendationSecond");
+        let recommendationDisplayPropertyThird = document.getElementById("Question2RecommendationThird");
+
+        let selObj = document.getElementById("evaluation2");
+        let selValue = parseInt(selObj.options[selObj.selectedIndex].value, 10);
+
+        if (selValue === 1) {
+            recommendationDisplayPropertyFirst.style.display = "block";
+            recommendationDisplayPropertySecond.style.display = "none";
+            recommendationDisplayPropertyThird.style.display = "none";
+        } else if (selValue === 2) {
+            recommendationDisplayPropertyFirst.style.display = "none";
+            recommendationDisplayPropertySecond.style.display = "block";
+            recommendationDisplayPropertyThird.style.display = "none";
+        } else {
+            recommendationDisplayPropertyFirst.style.display = "none";
+            recommendationDisplayPropertySecond.style.display = "none";
+            recommendationDisplayPropertyThird.style.display = "block";
+        }
+
+    }
+
+}
+
 // Top accordion
 for (let i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function () {
@@ -215,17 +348,4 @@ function scrollFunction() {
 function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
-
-
-// function to show a recommendation box for the user if GDPR is relevant for them
-function showRecommendationGDPR(elementIndex) {
-    let selObj = document.getElementById("evaluation" + elementIndex);
-    let recommendationDisplayProperty = document.getElementById("recommendation" + elementIndex);
-    // check the selected answer to show recommendation if necessary
-    if ((selObj.options[selObj.selectedIndex].text.localeCompare("Yes") === 0)) {
-        recommendationDisplayProperty.style.display = "block";
-    } else {
-        recommendationDisplayProperty.style.display = "none";
-    }
 }

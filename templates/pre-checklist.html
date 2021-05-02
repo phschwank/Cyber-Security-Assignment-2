@@ -33,7 +33,347 @@
         sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</h3>
 </div>
 <div class="content">
-    <!--NEW CONTENT HERE-->
+    <!----------------------------->
+    <!-- Introduction Image      -->
+    <!----------------------------->
+    <div class="img-container">
+        <img height="768" src="../resources/images/principles_personal_data.jpg" width="768"><br/><span
+            style="font-size: 12px;"><a
+            href="https://www.lawinfographic.com/principles-processing-personal-data_by_jessica_lam/">Read full article</a> (via <a
+            href="https://www.lawinfographic.com/">www.lawinfographic.com</a>).</span>
+    </div>
+    <hr class="horizontal-separator">
+    <!----------------------------->
+    <!-- QUESTION 1              -->
+    <!----------------------------->
+    <p class="text-padding">Do you collect, use, hold or do anything else with the personal information of employees,
+        customers or both?</p>
+    <div class="column">
+        <div class="input-row">
+            <label for="evaluation1">Choose:</label>
+            <select class="form-control" id="evaluation1" onchange="showRecommendationPreChecklist('1')">
+                <option disabled selected value="">Select your option</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+        <div class="recommendation" id="Question1RecommendationYes">
+            Continue with the questionnaire.
+        </div>
+        <div class="recommendation" id="Question1RecommendationNo">
+            End of assessment, you do not need to do anything about data protection. Enjoy your spare time. ;-)
+        </div>
+    </div>
+    <button class="accordion">More Information</button>
+    <div class="panel">
+        <p class="text-padding">
+            Personal information is any information that can identify a living person. This could be anything from a
+            name or email address to medical information or a computer’s IP address.
+        </p>
+        <br>
+        <iframe class="embedded-video" src="https://www.youtube.com/embed/YJInlE99vSs"></iframe>
+    </div>
+    <hr class="horizontal-separator">
+    <!----------------------------->
+    <!-- QUESTION 2              -->
+    <!----------------------------->
+    <p class="text-padding">How many employees do you have in your organisation?</p>
+    <div class="column">
+        <div class="input-row">
+            <label for="evaluation2">Choose:</label>
+            <select class="form-control" id="evaluation2" onchange="showRecommendationPreChecklist('2')">
+                <option disabled selected value="">Select your option</option>
+                <option value="1">1-10</option>
+                <option value="2">11-50</option>
+                <option value="3">51-250</option>
+            </select>
+        </div>
+        <div class="recommendation" id="Question2RecommendationFirst">
+            As a micro-organisation that handles personal data, you need to comply with the law.
+        </div>
+        <div class="recommendation" id="Question2RecommendationSecond">
+            As a small to medium sized organisation that handles personal data, you need to comply with data protection
+            law.
+        </div>
+        <div class="recommendation" id="Question2RecommendationThird">
+            As a medium sized organisation that handles personal data, you need to comply with data protection law.
+        </div>
+    </div>
+    <hr class="horizontal-separator">
+    <!----------------------------->
+    <!-- QUESTION 3              -->
+    <!----------------------------->
+    <p class="text-padding">Do you have a record of what personal data you hold? Do you know what you use it for?</p>
+    <div class="column">
+        <div class="input-row">
+            <label for="evaluation3">Choose:</label>
+            <select class="form-control" id="evaluation3" name="question">
+                <option disabled selected value="">Select your option</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+    </div>
+    <button class="accordion">More Information</button>
+    <div class="panel">
+        <p class="text-padding">
+        <ul class="specification-list-level-one">
+            <li>Have you thought about what information comes into, through and out of your business?</li>
+            <br>
+            <li>Does this information include personal data about your customers? This could include names and addresses
+                of people you deliver goods to, contacts you use for telemarketing, and members’ enrolment details?
+            </li>
+            <br>
+            <li>Do you know why you collect and hold personal data?</li>
+            <br>
+            <li>Have you made a record of the personal data you hold, what you do with it and why you hold it?</li>
+            <br>
+        </ul>
+        </p>
+    </div>
+    <hr class="horizontal-separator">
+    <!----------------------------->
+    <!-- QUESTION 4              -->
+    <!----------------------------->
+    <p class="text-padding">Do people know you have their personal data and understand how you use it?</p>
+    <div class="column">
+        <div class="input-row">
+            <label for="evaluation4">Choose:</label>
+            <select class="form-control" id="evaluation4" name="question">
+                <option disabled selected value="">Select your option</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+    </div>
+    <button class="accordion">More Information</button>
+    <div class="panel">
+        <p class="text-padding">
+        <ul class="specification-list-level-one">
+            <li>Do you tell people how you use their personal data?</li>
+            <br>
+            <li>Do you tell people if you’re sharing their data?</li>
+            <br>
+            <li>Do you tell people what you plan to do with their data either in paper form, such as using leaflets or
+                posters, or online through a privacy notice or statement?
+            </li>
+            <br>
+        </ul>
+        </p>
+    </div>
+    <hr class="horizontal-separator">
+    <!----------------------------->
+    <!-- QUESTION 5              -->
+    <!----------------------------->
+    <p class="text-padding">Do you only collect the personal data you need?</p>
+    <div class="column">
+        <div class="input-row">
+            <label for="evaluation5">Choose:</label>
+            <select class="form-control" id="evaluation5" name="question">
+                <option disabled selected value="">Select your option</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+    </div>
+    <button class="accordion">More Information</button>
+    <div class="panel">
+        <p class="text-padding">
+        <ul class="specification-list-level-one">
+            <li>Do you only collect the personal data you need to work with and use?</li>
+            <br>
+            <li>Do you make sure people know the difference between information they need to provide and information
+                that is optional?
+            </li>
+            <br>
+        </ul>
+        </p>
+    </div>
+    <hr class="horizontal-separator">
+    <!----------------------------->
+    <!-- QUESTION 6              -->
+    <!----------------------------->
+    <p class="text-padding">Do you only keep personal data for as long as it is needed?</p>
+    <div class="column">
+        <div class="input-row">
+            <label for="evaluation6">Choose:</label>
+            <select class="form-control" id="evaluation6" name="question">
+                <option disabled selected value="">Select your option</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+    </div>
+    <button class="accordion">More Information</button>
+    <div class="panel">
+        <p class="text-padding">
+        <ul class="specification-list-level-one">
+            <li>Have you decided and documented how long you will hold the personal data you collect?</li>
+            <br>
+            <li>Do you refresh or destroy personal data after specified periods of time?</li>
+            <br>
+            <li>Do you securely delete or destroy personal data as soon as you no longer need it?</li>
+            <br>
+        </ul>
+        </p>
+    </div>
+    <hr class="horizontal-separator">
+    <!----------------------------->
+    <!-- QUESTION 7              -->
+    <!----------------------------->
+    <p class="text-padding">Do you keep personal data accurate and up to date?</p>
+    <div class="column">
+        <div class="input-row">
+            <label for="evaluation7">Choose:</label>
+            <select class="form-control" id="evaluation7" name="question">
+                <option disabled selected value="">Select your option</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+    </div>
+    <button class="accordion">More Information</button>
+    <div class="panel">
+        <p class="text-padding">
+        <ul class="specification-list-level-one">
+            <li>Do you regularly check that the personal data you hold is accurate and up to date?</li>
+            <br>
+        </ul>
+        </p>
+    </div>
+    <hr class="horizontal-separator">
+    <!----------------------------->
+    <!-- QUESTION 8              -->
+    <!----------------------------->
+    <p class="text-padding">Do you keep personal data secure?</p>
+    <div class="column">
+        <div class="input-row">
+            <label for="evaluation8">Choose:</label>
+            <select class="form-control" id="evaluation8" name="question">
+                <option disabled selected value="">Select your option</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+    </div>
+    <button class="accordion">More Information</button>
+    <div class="panel">
+        <p class="text-padding">
+        <ul class="specification-list-level-one">
+            <li>Do you keep personal data secure in the office, for example by using lockable filing cabinets and
+                locking or logging off computers when away from your desk?
+            </li>
+            <br>
+            <li>Do you take steps to keep personal data secure before you take it out and about or send it somewhere
+                else? For example, do you only take with you the data you need or send it in advance by secure methods?
+            </li>
+            <br>
+            <li>Do you keep paper documents secure, say by using lockable storage and disposing of paper records
+                securely?
+            </li>
+            <br>
+            <li>Do you keep electronic data secure, say by encrypting mobile devices, using passwords and backing up the
+                data?
+            </li>
+            <br>
+        </ul>
+        </p>
+    </div>
+    <hr class="horizontal-separator">
+    <!----------------------------->
+    <!-- QUESTION 9              -->
+    <!----------------------------->
+    <p class="text-padding">Do you have a way for people to exercise their rights regarding the personal data you hold
+        about them?</p>
+    <div class="column">
+        <div class="input-row">
+            <label for="evaluation9">Choose:</label>
+            <select class="form-control" id="evaluation9" name="question">
+                <option disabled selected value="">Select your option</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+    </div>
+    <button class="accordion">More Information</button>
+    <div class="panel">
+        <p class="text-padding">
+        <ul class="specification-list-level-one">
+            <li>Do you know about the rights individuals have under the law?</li>
+            <br>
+            <li>Do you have plans in place so you can deal with any requests?</li>
+            <br>
+            <li>Do you know that a request can be made in writing or verbally, in person or on the phone?</li>
+            <br>
+            <li>Do you know how long you have to respond to a request?</li>
+            <br>
+            <li>Are you able to delete someone’s information if they ask you to?</li>
+            <br>
+        </ul>
+        </p>
+    </div>
+    <hr class="horizontal-separator">
+    <!----------------------------->
+    <!-- QUESTION 10              -->
+    <!----------------------------->
+    <p class="text-padding">Do you and your staff (if you have any) know your data protection responsibilities?</p>
+    <div class="column">
+        <div class="input-row">
+            <label for="evaluation10">Choose:</label>
+            <select class="form-control" id="evaluation10" name="question">
+                <option disabled selected value="">Select your option</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+    </div>
+    <button class="accordion">More Information</button>
+    <div class="panel">
+        <p class="text-padding">
+        <ul class="specification-list-level-one">
+            <li>Have you trained all your staff who handle personal data on their data protection responsibilities?</li>
+            <br>
+            <li>Do you know what to do if something goes wrong, including a personal data breach?</li>
+            <br>
+            <li>Do you know which breaches to report to?</li>
+            <br>
+            <li>Do you know which breaches you have to inform individuals of?</li>
+            <br>
+        </ul>
+        </p>
+    </div>
+    <hr class="horizontal-separator">
+    <!----------------------------->
+    <!-- QUESTION 11              -->
+    <!----------------------------->
+    <p class="text-padding">Do you know if you are obliged to pay a data protection fee?</p>
+    <div class="column">
+        <div class="input-row">
+            <label for="evaluation11">Choose:</label>
+            <select class="form-control" id="evaluation11" name="question">
+                <option disabled selected value="">Select your option</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+    </div>
+    <hr class="horizontal-separator">
+    <!----------------------------->
+    <!-- SCORE BOX               -->
+    <!----------------------------->
+    <div class="pre-checklist-box" id="pre-checklist-box">
+            <p class="green-text" id="green-text">Your overall rating was green, review our checklist.</p>
+            <p class="yellow-text" id="yellow-text">Your overall rating is yellow, check our checklist to improve your
+                status.</p>
+            <p class="red-text" id="red-text">Your overall rating is red, start the "Controller’s Checklist".<br><br>
+                The consequence of non-compliance with the data protection rules is serious.<br><br>Get more information
+                <a href="https://ec.europa.eu/info/law/law-topic/data-protection/reform/rules-business-and-organisations/enforcement-and-sanctions/sanctions/what-if-my-company-organisation-fails-comply-data-protection-rules_en"
+                   target="_blank">here</a>.
+            </p>
+            <p class="nan-text" id="nan-text">Please answer all questions to get a correct evaluation for further procedure.</p>
+    </div>
+    <button class="interaction-button" id="submit-button" onclick="countPointsPreChecklist()">Submit</button>
+    <button id="myTopBtn" onclick="topFunction()" title="Go to top">Top</button>
 </div>
 </body>
 </html>

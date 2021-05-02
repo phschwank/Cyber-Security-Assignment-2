@@ -51,47 +51,55 @@
     <button class="accordion">Is GDPR relevant to my company?</button>
     <div class="panel">
         <br>
-        <p class="text-padding">Is the headquarter or a branch of your organisation located in the European Union or the European Economic Area?</p>
+        <p class="text-padding">Is the headquarter or a branch of your organisation located in the European Union or the
+            European Economic Area?</p>
         <div class="column">
             <div class="input-row">
                 <label for="evaluation1">Choose:</label>
                 <select class="form-control" id="evaluation1" name="question" onchange="showRecommendationGDPR('1')">
                     <option value="" disabled selected>Select your option</option>
-                    <option value="1">No</option>
-                    <option value="0">Yes</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
                 </select>
             </div>
             <div class="recommendation" id="recommendation1">
-                Based on your answer we assume that GDPR is applicable to your company. Please consider, that GDPR is not necessarily applicable
-                to your organisation in Switzerland. This is depending on the activities of your organisation. However, GDPR is under all circumstances
+                Based on your answer we assume that GDPR is applicable to your company. Please consider, that GDPR is
+                not necessarily applicable
+                to your organisation in Switzerland. This is depending on the activities of your organisation. However,
+                GDPR is under all circumstances
                 applicable to your branches outside of Switzerland
             </div>
         </div>
 
         <button class="accordionAccordion">More Information about branches in the European Economic Area</button>
         <div class="panelAccordion">
-          <p class="text-padding">
+            <p class="text-padding">
             <ul class="specification-list-level-one">
-              <li>There is no applicability of GDPR from the mere retrievability of a swiss website in the EEA.</li>
-              <br><br>
-              <li>Swiss companies that act as data processors for customers covered by GDPR may also be partially covered by GDPR.</li>
-              <br><br>
-              <li>The mere presence of an employee in the EEA is not sufficient to trigger the application of GDPR.
-                  However, this can be the case if the data processing is carried out in the context of the activities of the EEA-based employee.</li>
-              <br><br>
+                <li>There is no applicability of GDPR from the mere retrievability of a swiss website in the EEA.</li>
+                <br><br>
+                <li>Swiss companies that act as data processors for customers covered by GDPR may also be partially
+                    covered by GDPR.
+                </li>
+                <br><br>
+                <li>The mere presence of an employee in the EEA is not sufficient to trigger the application of GDPR.
+                    However, this can be the case if the data processing is carried out in the context of the activities
+                    of the EEA-based employee.
+                </li>
+                <br><br>
             </ul>
-          </p>
+            </p>
         </div>
 
         <hr class="horizontal-separator">
-        <p class="text-padding">Are your offers (including free offers) explicitly directed at persons in the European Union or the European Economic Area?</p>
+        <p class="text-padding">Are your offers (including free offers) explicitly directed at persons in the European
+            Union or the European Economic Area?</p>
         <div class="column">
             <div class="input-row">
                 <label for="evaluation2">Choose:</label>
                 <select class="form-control" id="evaluation2" name="question" onchange="showRecommendationGDPR('2')">
                     <option value="" disabled selected>Select your option</option>
-                    <option value="1">No</option>
-                    <option value="0">Yes</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
                 </select>
             </div>
             <div class="recommendation" id="recommendation2">
@@ -101,74 +109,92 @@
 
         <button class="accordionAccordion">More Information about intended offers in the European Economic Area</button>
         <div class="panelAccordion">
-          <p class="text-padding">
-            The following activities can indicate an intended offer which would lead to the applicability of GDPR:
-            <br><br>
+            <p class="text-padding">
+                The following activities can indicate an intended offer which would lead to the applicability of GDPR:
+                <br><br>
             <ul class="specification-list-level-one">
-              <li>The mention of the EU or at least one EEA member state in connection with services or goods offered.</li>
-              <br><br>
-              <li>The delivery or shipment of goods to persons in the EEA.</li>
-              <br><br>
-              <li>The advertising directed at an audience in the EEA, for example, relevant search engine advertising.</li>
-              <br><br>
-              <li>The publication of contact addresses and telephone numbers or directions for persons in the EEA.</li>
-              <br><br>
-              <li>The use of top level domains related to the EU (.eu) or at least one EEA member state (for example .at, .de or .li).</li>
-              <br><br>
-              <li>The use of a language or currency used in at least one EEA member state.</li>
-              <br><br>
-              <li>Activities with an international character, for example certain tourist activities.</li>
-              <br><br>
-              <li>The mention of an international customer base residing in different EEA member states.</li>
-              <br><br>
+                <li>The mention of the EU or at least one EEA member state in connection with services or goods
+                    offered.
+                </li>
+                <br><br>
+                <li>The delivery or shipment of goods to persons in the EEA.</li>
+                <br><br>
+                <li>The advertising directed at an audience in the EEA, for example, relevant search engine
+                    advertising.
+                </li>
+                <br><br>
+                <li>The publication of contact addresses and telephone numbers or directions for persons in the EEA.
+                </li>
+                <br><br>
+                <li>The use of top level domains related to the EU (.eu) or at least one EEA member state (for example
+                    .at, .de or .li).
+                </li>
+                <br><br>
+                <li>The use of a language or currency used in at least one EEA member state.</li>
+                <br><br>
+                <li>Activities with an international character, for example certain tourist activities.</li>
+                <br><br>
+                <li>The mention of an international customer base residing in different EEA member states.</li>
+                <br><br>
             </ul>
-          </p>
+            </p>
         </div>
 
         <hr class="horizontal-separator">
-        <p class="text-padding">Do you monitor the behavior of people in the European Union or the European Economic Area,
-          for example, by tracking the activities of app users or website visitors?</p>
+        <p class="text-padding">Do you monitor the behavior of people in the European Union or the European Economic
+            Area,
+            for example, by tracking the activities of app users or website visitors?</p>
         <div class="column">
             <div class="input-row">
                 <label for="evaluation3">Choose:</label>
                 <select class="form-control" id="evaluation3" name="question" onchange="showRecommendationGDPR('3')">
                     <option value="" disabled selected>Select your option</option>
-                    <option value="1">No</option>
-                    <option value="0">Yes</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
                 </select>
             </div>
             <div class="recommendation" id="recommendation3">
-                Based on your answer we assume that GDPR is applicable to your company. However, the final answer is strongly depending
+                Based on your answer we assume that GDPR is applicable to your company. However, the final answer is
+                strongly depending
                 on your purpose of processing.
             </div>
         </div>
 
-        <button class="accordionAccordion">More Information about the monitoring of people in the European Economic Area</button>
+        <button class="accordionAccordion">More Information about the monitoring of people in the European Economic
+            Area
+        </button>
         <div class="panelAccordion">
-          <p class="text-padding">
-            The following activities can indicate a monitoring of people that would lead to the applicability of GDPR:
-            <br><br>
+            <p class="text-padding">
+                The following activities can indicate a monitoring of people that would lead to the applicability of
+                GDPR:
+                <br><br>
             <ul class="specification-list-level-one">
-              <li>The use of personalized or behavioral advertising.</li>
-              <br><br>
-              <li>The use of Geo-localization, especially for marketing purposes.</li>
-              <br><br>
-              <li>The tracking with cookies or fingerprinting.</li>
-              <br><br>
-              <li>The performance of a personalized analysis of eating habits and health data.</li>
-              <br><br>
-              <li>The performance of personalized studies and surveys for market research.</li>
-              <br><br>
-              <li>The use of video surveillance.</li>
-              <br><br>
+                <li>The use of personalized or behavioral advertising.</li>
+                <br><br>
+                <li>The use of Geo-localization, especially for marketing purposes.</li>
+                <br><br>
+                <li>The tracking with cookies or fingerprinting.</li>
+                <br><br>
+                <li>The performance of a personalized analysis of eating habits and health data.</li>
+                <br><br>
+                <li>The performance of personalized studies and surveys for market research.</li>
+                <br><br>
+                <li>The use of video surveillance.</li>
+                <br><br>
             </ul>
-          </p>
+            </p>
         </div>
-
         <hr class="horizontal-separator">
+        <div class="recommendation" id="further-procedure">
+            Based on your answers in the short assessment, we assume that GDPR is applicable to your company. We
+            recommend that you continue with the pre-checklist, which will give you further suggestions for the
+            remaining procedure.<br><br>
+            <a href="templates/pre-checklist.html" class="checklist-button">Pre-Checklist</a>
+        </div>
         <p class="text-padding">Please check this
-          <a href="https://steigerlegal.ch/2019/11/17/dsgvo-gdpr-leitlinien-schweiz-dsgvo-3/" target="_blank">weblink</a>
-          for more detailed information and the description of some specific use cases.</p>
+            <a href="https://steigerlegal.ch/2019/11/17/dsgvo-gdpr-leitlinien-schweiz-dsgvo-3/"
+               target="_blank">weblink</a>
+            for more detailed information and the description of some specific use cases.</p>
         <br>
 
     </div>

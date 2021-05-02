@@ -95,9 +95,30 @@ h3 {
     flex: 50%;
 }
 
-.logo {
-    width: 300px;
-    height: 160px;
+.img-container {
+    text-align: center;
+    display: block;
+}
+
+img {
+    width: 512px;
+    height: 512px;
+    cursor: zoom-in;
+    text-align: center;
+}
+
+img:hover {
+    color: #424242;
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -ms-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+    opacity: 1;
+    transform: scale(1.5);
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari and Chrome */
+
 }
 
 .header {
@@ -146,34 +167,24 @@ h3 {
     text-align: right;
 }
 
-#print-button {
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color: #333; /* Set a background color */
-    color: white; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    font-size: 18px; /* Increase font size */
-}
-
-#print-button:hover {
-    background-color: #777; /* Add a dark-grey background on hover */
-}
-
-/*.checklist-button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+.print-button {
+    outline: none;
+    border-color: transparent;
     font-size: 16px;
-    margin: 4px 2px;
+    padding: 2px 5px;
+    box-sizing: border-box;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
     cursor: pointer;
-}*/
+    display: inline-block;
+    text-align: center;
+    line-height: 25px;
+    text-align: center;
+}
 
 .checklist-button {
+    outline: none;
     border-color: transparent;
     font-size: 16px;
     padding: 2px 5px;
@@ -188,6 +199,7 @@ h3 {
 }
 
 .interaction-button {
+    outline: none;
     border-color: transparent;
     font-size: 16px;
     padding: 2px 5px;
@@ -204,6 +216,10 @@ h3 {
 .input-unit {
     flex-shrink: 0;
     padding: 3px 3px 3px 6px;
+}
+
+.print-button:hover {
+    background-color: #777;
 }
 
 .checklist-button:hover {
@@ -288,6 +304,34 @@ tbody {
     color: #444444;
     margin-top: 10px;
     margin-bottom: 10px;
+    display: none;
+}
+
+.pre-checklist-box {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    color: #444444;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.green-text {
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+.yellow-text {
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+.red-text {
+    width: 100%;
+    text-align: center;
     display: none;
 }
 
@@ -462,7 +506,7 @@ tbody {
         margin-bottom: 5vw;
     }
 
-    .logo {
+    img {
         width: 100%;
         height: auto;
         float: right;
@@ -492,6 +536,12 @@ tbody {
     }
 
     .checklist-button {
+        width: 100%;
+        display: block;
+        margin: 5px 0;
+    }
+
+    .print-button {
         width: 100%;
         display: block;
         margin: 5px 0;
