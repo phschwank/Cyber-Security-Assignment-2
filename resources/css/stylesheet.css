@@ -115,9 +115,9 @@ h3 {
     -o-transition: all .3s ease-in;
     transition: all .3s ease-in;
     opacity: 1;
-    transform: scale(1.5);
-    -ms-transform: scale(1.5); /* IE 9 */
-    -webkit-transform: scale(1.5); /* Safari and Chrome */
+    transform: scale(1.75);
+    -ms-transform: scale(1.75); /* IE 9 */
+    -webkit-transform: scale(1.75); /* Safari and Chrome */
 
 }
 
