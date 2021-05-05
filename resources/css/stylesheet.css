@@ -335,68 +335,25 @@ tbody {
     display: none;
 }
 
-.gold-text {
+.gold-text, .silver-text, .bronze-text, .warning-text {
     width: 100%;
-    margin: 50px 10px;
+    margin: 10px 10px;
     text-align: left;
     display: none;
 }
 
-.silver-text {
-    width: 100%;
-    margin: 50px 10px;
-    text-align: left;
-    display: none;
-}
-
-.bronze-text {
-    width: 100%;
-    margin: 50px 10px;
-    text-align: left;
-    display: none;
-}
-
-.warning-text {
-    width: 100%;
-    margin: 50px 10px;
-    text-align: left;
-    display: none;
-}
-
-.gold-medal {
+.gold-medal, .silver-medal, .bronze-medal {
     display: none;
     width: 86px;
-    height: 121px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-}
-
-.silver-medal {
-    display: none;
-    width: 86px;
-    height: 121px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-}
-
-.bronze-medal {
-    display: none;
-    width: 86px;
-    height: 121px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
+    height: 100px;
+    margin: 10px 10px;
 }
 
 .warning-sign {
     display: none;
     width: 100px;
     height: 100px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
+    margin: 10px 10px;
 }
 
 /* Style the buttons that are used to open and close the accordion panel */
