@@ -298,6 +298,17 @@ tbody {
     display: none;
 }
 
+.information {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #8f8e8c;
+    color: #444444;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: none;
+}
+
 .score-box {
     width: 100%;
     padding: 10px 0;
