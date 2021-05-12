@@ -353,6 +353,13 @@ tbody {
     display: none;
 }
 
+.nan-text, .green-text, .yellow-text, .red-text {
+    width: 100%;
+    margin: 10px 10px;
+    text-align: center;
+    display: none;
+}
+
 .gold-medal, .silver-medal, .bronze-medal {
     display: none;
     width: 86px;
