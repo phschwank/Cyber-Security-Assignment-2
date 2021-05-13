@@ -59,11 +59,20 @@ function countPoints(checklist) {
     }
     // assign the corresponding score box to the achieved score by calling the showScoreBox function
     score = (evaluatedSum / maxPoints) * 100;
-    evaluateScoreBox(score, "gold-medal", "gold-text", "silver-medal",
-        "silver-text", "bronze-medal", "bronze-text", "warning-sign",
-        "warning-text", "score-box", "nan-text");
-    // save actual score to local storage (key:value pair)
-    sessionStorage.setItem(checklist, score);
+
+    if (Number.isNaN(score)) {
+        document.getElementById("nan-text").style.display = "block"
+        document.getElementById("score-box").style.display = "block";
+        document.getElementById("score-box").style.backgroundColor = "lightcoral";
+    } else {
+        document.getElementById("nan-text").style.display = "none";
+        evaluateScoreBox(score, "gold-medal", "gold-text", "silver-medal",
+            "silver-text", "bronze-medal", "bronze-text", "warning-sign",
+            "warning-text", "score-box");
+        // save actual score to local storage (key:value pair)
+        sessionStorage.setItem(checklist, score);
+    }
+
 }
 
 // function to calculate score of the Pre-Checklist
@@ -191,32 +200,27 @@ function updateOverviewResult() {
 
 // function to determine the corresponding score box
 function evaluateScoreBox(score, goldMedalId, goldTextId, silverMedalId, silverTextId, bronzeMedalId, bronzeTextId,
-                          warningSignId, warningTextId, scoreBoxId, nanTxtId) {
-    if (Number.isNaN(score)) {
-        showScoreBox(goldMedalId, "none", goldTextId, "none", silverMedalId,
-            "none", silverTextId, "none", bronzeMedalId, "none",
-            bronzeTextId, "none", warningSignId, "none", warningTextId,
-            "none", scoreBoxId, "block", nanTxtId, "block", "lightcoral")
-    } else if (score >= 90) {
+                          warningSignId, warningTextId, scoreBoxId) {
+    if (score >= 90) {
         showScoreBox(goldMedalId, "block", goldTextId, "block", silverMedalId,
             "none", silverTextId, "none", bronzeMedalId, "none",
             bronzeTextId, "none", warningSignId, "none", warningTextId,
-            "none", scoreBoxId, "block", nanTxtId, "none","lightgoldenrodyellow")
+            "none", scoreBoxId, "block", "lightgoldenrodyellow")
     } else if ((score < 90) && (score >= 70)) {
         showScoreBox(goldMedalId, "none", goldTextId, "none", silverMedalId,
             "block", silverTextId, "block", bronzeMedalId, "none",
             bronzeTextId, "none", warningSignId, "none", warningTextId,
-            "none", scoreBoxId, "block", nanTxtId, "none","lightblue")
+            "none", scoreBoxId, "block", "lightblue")
     } else if ((score < 70) && (score >= 50)) {
         showScoreBox(goldMedalId, "none", goldTextId, "none", silverMedalId,
             "none", silverTextId, "none", bronzeMedalId, "block",
             bronzeTextId, "block", warningSignId, "none", warningTextId,
-            "none", scoreBoxId, "block", nanTxtId, "none","lightsalmon")
+            "none", scoreBoxId, "block", "lightsalmon")
     } else {
         showScoreBox(goldMedalId, "none", goldTextId, "none", silverMedalId,
             "none", silverTextId, "none", bronzeMedalId, "none",
             bronzeTextId, "none", warningSignId, "block", warningTextId,
-            "block", scoreBoxId, "block", nanTxtId, "none","lightcoral")
+            "block", scoreBoxId, "block", "lightcoral")
     }
 }
 
@@ -224,8 +228,7 @@ function evaluateScoreBox(score, goldMedalId, goldTextId, silverMedalId, silverT
 function showScoreBox(goldMedalId, goldMedalProperty, goldTextId, goldTextProperty, silverMedalId, silverMedalProperty,
                       silverTextId, silverTextProperty, bronzeMedalId, bronzeMedalProperty, bronzeTextId,
                       bronzeTextProperty, warningSignId, warningSignProperty, warningTextId, warningTextProperty,
-                      scoreBoxId, scoreBoxProperty, nanTxtId, nanTxtProperty, backgroundColor) {
-    document.getElementById(nanTxtId).style.display = nanTxtProperty;
+                      scoreBoxId, scoreBoxProperty, backgroundColor) {
     document.getElementById(goldMedalId).style.display = goldMedalProperty;
     document.getElementById(goldTextId).style.display = goldTextProperty;
     document.getElementById(silverMedalId).style.display = silverMedalProperty;
