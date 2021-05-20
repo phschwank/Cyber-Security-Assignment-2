@@ -101,13 +101,12 @@ h3 {
 }
 
 .img {
-    width: 512px;
-    height: 512px;
+    width: 650px;
+    height: 650px;
     cursor: zoom-in;
     text-align: center;
 }
-
-.img:hover {
+.img-resize {
     color: #424242;
     -webkit-transition: all .3s ease-in;
     -moz-transition: all .3s ease-in;
@@ -116,9 +115,8 @@ h3 {
     transition: all .3s ease-in;
     opacity: 1;
     transform: scale(2.0);
-    -ms-transform: scale(2.0); /* IE 9 */
-    -webkit-transform: scale(2.0); /* Safari and Chrome */
-
+    -ms-transform: scale(2.0);
+    -webkit-transform: scale(2.0);
 }
 
 .header {
