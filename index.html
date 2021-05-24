@@ -47,8 +47,7 @@
 
         With our checklists, you can review your compliance with data protection laws and determine what steps you need
         to take to ensure data is kept in compliance with the law. After completing each checklist, short feedback is
-        available to suggest practical actions to improve your data protection compliance. Please note that the results
-        of the checklists are not legally binding and are only intended to assist you. Further literature and the
+        available to suggest practical actions to improve your data protection compliance. Further literature and the
         sources used for the related topics can be viewed in the <a href="templates/bibliography.html" target="_blank">Bibliography</a>
         section.<br><br>
 
@@ -70,7 +69,7 @@
             <div class="input-row">
                 <label for="evaluation1">Choose:</label>
                 <select class="form-control" id="evaluation1" name="question" onchange="showRecommendationGDPR('1')">
-                    <option value="" disabled selected>Select your option</option>
+                    <option disabled selected value="">Select your option</option>
                     <option value="0">No</option>
                     <option value="1">Yes</option>
                 </select>
@@ -110,7 +109,7 @@
             <div class="input-row">
                 <label for="evaluation2">Choose:</label>
                 <select class="form-control" id="evaluation2" name="question" onchange="showRecommendationGDPR('2')">
-                    <option value="" disabled selected>Select your option</option>
+                    <option disabled selected value="">Select your option</option>
                     <option value="0">No</option>
                     <option value="1">Yes</option>
                 </select>
@@ -160,7 +159,7 @@
             <div class="input-row">
                 <label for="evaluation3">Choose:</label>
                 <select class="form-control" id="evaluation3" name="question" onchange="showRecommendationGDPR('3')">
-                    <option value="" disabled selected>Select your option</option>
+                    <option disabled selected value="">Select your option</option>
                     <option value="0">No</option>
                     <option value="1">Yes</option>
                 </select>
@@ -202,7 +201,7 @@
                 your company. We
                 recommend that you continue with the "Pre-Checklist", which will give you further suggestions for the
                 remaining procedure.</p><br>
-            <a href="templates/pre-checklist.html" class="checklist-button">Pre-Checklist</a>
+            <a class="checklist-button" href="templates/pre-checklist.html">Pre-Checklist</a>
         </div>
         <div class="information" id="further-procedure-no">
             <p class="text-padding">Based on your answers in the short assessment, we assume that GDPR is not applicable
@@ -214,7 +213,16 @@
                target="_blank">weblink</a>
             for more detailed information and the description of some specific use cases.</p>
         <br>
-
+    </div>
+    <br><br>
+    <div class="disclaimer">
+        <h2>Disclaimer</h2>
+        <p>
+            Please note that the results and provided information in the tool are not the same as legal advice, where an
+            attorney applies the law to your specific circumstances. We insist that you consult an attorney if you would
+            like advice on your interpretation of this information or its accuracy. In a nutshell, you may not rely on this
+            as legal advice nor as a recommendation of any particular legal understanding.
+        </p>
     </div>
     <button id="myTopBtn" onclick="topFunction()" title="Go to top">Top</button>
 </div>
