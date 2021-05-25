@@ -8,7 +8,9 @@ let relevanceScore = 0;
 let acc = document.getElementsByClassName("accordion");
 let accAcc = document.getElementsByClassName("accordionAccordion");
 // scroll to top button
-toTopbutton = document.getElementById("myTopBtn");
+toTopbutton = document.getElementById("top-button");
+// get element to print the warning
+let printWarning = document.getElementById("print-warning")
 
 // function to check assessment of the index page
 if (window.location.href.match('index.html') != null) {
@@ -71,17 +73,18 @@ function countPoints(checklist) {
             "warning-text", "score-box");
         // save actual score to local storage (key:value pair)
         sessionStorage.setItem(checklist, score);
+        // show print warning
+        printWarning.style.display = "block";
+        // hide elements from printing
+        let accordionToHide = document.getElementsByClassName("accordion");
+        let panelToHide = document.getElementsByClassName("panel")
+        for(let i = 0; i < accordionToHide.length; i++){
+            togglePrintElement(accordionToHide[i]);
+        }
+        for(let i = 0; i < panelToHide.length; i++){
+            togglePrintElement(panelToHide[i]);
+        }
     }
-    // hide elements from printing
-    let accordionToHide = document.getElementsByClassName("accordion");
-    let panelToHide = document.getElementsByClassName("panel")
-    for(let i = 0; i < accordionToHide.length; i++){
-        togglePrintElement(accordionToHide[i]);
-    }
-    for(let i = 0; i < panelToHide.length; i++){
-        togglePrintElement(panelToHide[i]);
-    }
-
 }
 
 // function to calculate score of the Pre-Checklist
@@ -116,6 +119,7 @@ function countPointsPreChecklist() {
         yellowText.style.display = "none";
         redText.style.display = "none";
         nanText.style.display = "none";
+        printWarning.style.display = "block";
     } else if ((evaluatedSum > 3) && (evaluatedSum < 7)) {
         scoreBox.style.backgroundColor = "lightgoldenrodyellow";
         scoreBox.style.display = "block";
@@ -123,6 +127,7 @@ function countPointsPreChecklist() {
         yellowText.style.display = "block";
         redText.style.display = "none";
         nanText.style.display = "none";
+        printWarning.style.display = "block";
     } else {
         scoreBox.style.backgroundColor = "lightcoral";
         scoreBox.style.display = "block";
@@ -130,10 +135,8 @@ function countPointsPreChecklist() {
         yellowText.style.display = "none";
         redText.style.display = "block";
         nanText.style.display = "none";
+        printWarning.style.display = "block";
     }
-    // show print warning
-    let printWarning = document.getElementById("print-warning")
-    printWarning.style.display = "block";
 
     // hide elements from printing
     let accordionToHide = document.getElementsByClassName("accordion");

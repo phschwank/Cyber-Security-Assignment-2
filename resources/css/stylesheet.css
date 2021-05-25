@@ -447,7 +447,7 @@ tbody {
     content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
-#myTopBtn {
+#top-button {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
     bottom: 20px; /* Place the button at the bottom of the page */
@@ -462,7 +462,7 @@ tbody {
     font-size: 18px; /* Increase font size */
 }
 
-#myTopBtn:hover {
+#top-button:hover {
     background-color: #777; /* Add a dark-grey background on hover */
 }
 

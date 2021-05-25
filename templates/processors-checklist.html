@@ -371,9 +371,17 @@
         </div>
     </div>
     <div class="no-print">
+        <div class="print-warning" id="print-warning">
+            <p>
+                For data protection reasons, no responses will be stored. Therefore, only the final evaluation score is
+                transferred to the page <a href="overview-results.html">'Overview / Results'</a>.
+                However, you can print this page for documentation purposes.
+                <br><br>
+                <button class="print-button" onClick="window.print()">Print this page</button>
+            </p>
+        </div>
         <button class="interaction-button" id="submit-button" onclick="countPoints('processorsChecklist')">Submit</button>
-        <button class="print-button" onClick="window.print()">Print this page</button>
-        <button id="myTopBtn" onclick="topFunction()" title="Go to top">Top</button>
+        <button id="top-button" onclick="topFunction()" title="Go to top">Top</button>
     </div>
 </div>
 </body>
