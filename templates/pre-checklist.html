@@ -37,11 +37,13 @@
     <!----------------------------->
     <!-- Introduction Image      -->
     <!----------------------------->
+    <div class="no-print">
     <div class="img-container">
         <img class="img" src="../resources/images/principles_personal_data.png" title="Click to zoom in." onclick="resizeImage(this)"><br/><span
             style="font-size: 12px;"><a
             href="https://www.lawinfographic.com/principles-processing-personal-data_by_jessica_lam/">Read full article</a> (via <a
             href="https://www.lawinfographic.com/">www.lawinfographic.com</a>).</span>
+    </div>
     </div>
     <hr class="horizontal-separator">
     <h2>Questionnaire</h2>
@@ -326,8 +328,16 @@
         <p class="nan-text" id="nan-text">Please answer all questions to get a correct evaluation for further
             procedure.</p>
     </div>
-    <button class="interaction-button" id="submit-button" onclick="countPointsPreChecklist()">Submit</button>
-    <button id="myTopBtn" onclick="topFunction()" title="Go to top">Top</button>
+    <div class="no-print">
+        <div class="print-warning" id="print-warning">
+            <p>
+                blabla<br>
+                <button class="print-button" onClick="window.print()">Print this page</button>
+            </p>
+        </div>
+        <button class="interaction-button" id="submit-button" onclick="countPointsPreChecklist()">Submit</button>
+        <button id="myTopBtn" onclick="topFunction()" title="Go to top">Top</button>
+    </div>
 </div>
 </body>
 </html>

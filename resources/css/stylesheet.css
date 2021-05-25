@@ -301,8 +301,17 @@ tbody {
     text-align: center;
     background-color: #8f8e8c;
     color: #444444;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 0;
+    display: none;
+}
+
+.print-warning {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background-color: lightcoral;
+    color: #444444;
+    margin: 10px 0;
     display: none;
 }
 
@@ -328,28 +337,9 @@ tbody {
 .pre-checklist-box {
     width: 100%;
     padding: 10px 0;
-    text-align: center;
     color: #444444;
     margin-top: 10px;
     margin-bottom: 10px;
-    display: none;
-}
-
-.green-text {
-    width: 100%;
-    text-align: center;
-    display: none;
-}
-
-.yellow-text {
-    width: 100%;
-    text-align: center;
-    display: none;
-}
-
-.red-text {
-    width: 100%;
-    text-align: center;
     display: none;
 }
 
@@ -565,6 +555,10 @@ tbody {
 @media print {
     body {
         -webkit-print-color-adjust: exact;
+    }
+
+    .no-print {
+        display: none !important;
     }
 }
 

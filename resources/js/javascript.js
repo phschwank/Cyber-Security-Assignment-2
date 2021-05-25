@@ -72,6 +72,15 @@ function countPoints(checklist) {
         // save actual score to local storage (key:value pair)
         sessionStorage.setItem(checklist, score);
     }
+    // hide elements from printing
+    let accordionToHide = document.getElementsByClassName("accordion");
+    let panelToHide = document.getElementsByClassName("panel")
+    for(let i = 0; i < accordionToHide.length; i++){
+        togglePrintElement(accordionToHide[i]);
+    }
+    for(let i = 0; i < panelToHide.length; i++){
+        togglePrintElement(panelToHide[i]);
+    }
 
 }
 
@@ -121,6 +130,19 @@ function countPointsPreChecklist() {
         yellowText.style.display = "none";
         redText.style.display = "block";
         nanText.style.display = "none";
+    }
+    // show print warning
+    let printWarning = document.getElementById("print-warning")
+    printWarning.style.display = "block";
+
+    // hide elements from printing
+    let accordionToHide = document.getElementsByClassName("accordion");
+    let panelToHide = document.getElementsByClassName("panel")
+    for(let i = 0; i < accordionToHide.length; i++){
+        togglePrintElement(accordionToHide[i]);
+    }
+    for(let i = 0; i < panelToHide.length; i++){
+        togglePrintElement(panelToHide[i]);
     }
 }
 
@@ -322,4 +344,9 @@ function topFunction() {
 // resize image on click (toggle "img-resize" class)
 function resizeImage(element) {
     element.classList.toggle("img-resize");
+}
+
+// function to hide element from printing
+function togglePrintElement(element) {
+    element.classList.toggle("no-print");
 }
