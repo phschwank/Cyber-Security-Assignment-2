@@ -3,7 +3,6 @@ let evaluatedSum;
 let maxPoints;
 let score;
 let numberOfQuestions;
-let relevanceScore = 0;
 // accordion for "More Information"
 let acc = document.getElementsByClassName("accordion");
 let accAcc = document.getElementsByClassName("accordionAccordion");
